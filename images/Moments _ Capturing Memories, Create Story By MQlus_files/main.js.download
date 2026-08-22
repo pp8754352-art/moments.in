@@ -1,0 +1,1344 @@
+// Static one-page interactions: sticky header, mobile menu, reveal animations, FAQ, and form validation.
+(function () {
+  var header = document.querySelector(".site-header");
+  var navToggle = document.querySelector(".nav-toggle");
+  var navMenu = document.querySelector(".nav-menu");
+  var navLinks = document.querySelectorAll(".nav-menu a");
+  var faqItems = document.querySelectorAll(".faq-item");
+  var faqSection = document.querySelector("#faq");
+  var faqList = document.querySelector("#faq .faq-list");
+  var processSection = document.querySelector("#process");
+  var bookingForm = document.querySelector("#bookingForm");
+  var formMessage = document.querySelector("#formMessage");
+  var reelSliders = document.querySelectorAll(".js-reel-slider");
+  var workCarousel = document.querySelector("#workCarousel");
+  var testimonialSlider = document.querySelector("#testimonialSlider");
+  var pricingCards = document.querySelectorAll("#packages .pricing-card");
+  var aboutBenefits = document.querySelector("#services .about-benefits");
+  var pageSkeleton = document.querySelector("#pageSkeleton");
+  var lazyVideos = Array.prototype.slice.call(document.querySelectorAll("video")).filter(function (video) {
+    return !video.closest("#workCarousel");
+  });
+  var ambientCanvas = document.querySelector("#ambientBubbles");
+  var activeScript = document.currentScript;
+  var trackedNavLinks = Array.prototype.slice.call(navLinks).filter(function (link) {
+  var hash = link.getAttribute("href");
+    return hash && hash.charAt(0) === "#" && document.getElementById(hash.slice(1));
+  });
+
+// Animate counters
+
+document.addEventListener("DOMContentLoaded", () => {
+  const statCounters = document.querySelectorAll(".js-stat-counter");
+
+  statCounters.forEach(counter => {
+    const target = parseFloat(counter.dataset.target);
+    const decimals = parseInt(counter.dataset.decimals || 0);
+    const duration = 2000; // ms
+
+    let startTime = null;
+
+    function animate(time) {
+      if (!startTime) startTime = time;
+      const progress = Math.min((time - startTime) / duration, 1);
+      const currentValue = target * progress;
+
+      counter.textContent = currentValue.toFixed(decimals);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        counter.textContent = target.toFixed(decimals);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  });
+});
+
+function animateCounter(counter) {
+  const target = parseFloat(counter.dataset.target);
+  const decimals = parseInt(counter.dataset.decimals || 0);
+  const duration = 2000;
+  let startTime = null;
+
+  function animate(time) {
+    if (!startTime) startTime = time;
+    const progress = Math.min((time - startTime) / duration, 1);
+    const currentValue = target * progress;
+    counter.textContent = currentValue.toFixed(decimals);
+
+    if (progress < 1) requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+const statCounters = document.querySelectorAll(".js-stat-counter");
+function checkCounters() {
+  statCounters.forEach(counter => {
+    if (!counter.dataset.animated && isInViewport(counter)) {
+      animateCounter(counter);
+      counter.dataset.animated = "true"; // prevent re-animation
+    }
+  });
+}
+
+window.addEventListener("scroll", checkCounters);
+window.addEventListener("load", checkCounters);
+  function initAmbientBubbles() {
+    if (!ambientCanvas || !ambientCanvas.getContext) {
+      return;
+    }
+
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      return;
+    }
+
+    var context = ambientCanvas.getContext("2d");
+    var particles = [];
+    var width = 0;
+    var height = 0;
+    var pixelRatio = 1;
+    var pointer = {
+      x: 0,
+      y: 0,
+      lastX: 0,
+      lastY: 0,
+      speed: 0,
+      active: false
+    };
+    var lastFrame = 0;
+    var animationFrame = null;
+    var colors = [
+      "rgba(0, 216, 228, 0.9)",
+      "rgba(246, 247, 251, 0.86)",
+      "rgba(255, 142, 190, 0.72)",
+      "rgba(125, 94, 255, 0.58)",
+      "rgba(61, 124, 255, 0.52)"
+    ];
+
+    function randomBetween(min, max) {
+      return min + Math.random() * (max - min);
+    }
+
+    function createParticle(isBubble) {
+      var radius = isBubble ? randomBetween(9, 28) : randomBetween(1.1, 2.4);
+      var speed = isBubble ? randomBetween(0.045, 0.14) : randomBetween(0.09, 0.24);
+      var angle = randomBetween(0, Math.PI * 2);
+
+      return {
+        x: randomBetween(0, width),
+        y: randomBetween(0, height),
+        radius: radius,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: isBubble ? randomBetween(0.12, 0.32) : randomBetween(0.36, 0.78),
+        pulse: randomBetween(0, Math.PI * 2),
+        pulseSpeed: randomBetween(0.008, 0.018),
+        isBubble: isBubble
+      };
+    }
+
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      pixelRatio = Math.min(window.devicePixelRatio || 1, 1.6);
+      ambientCanvas.width = Math.floor(width * pixelRatio);
+      ambientCanvas.height = Math.floor(height * pixelRatio);
+      ambientCanvas.style.width = width + "px";
+      ambientCanvas.style.height = height + "px";
+      context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+      var particleCount = Math.min(82, Math.max(48, Math.floor((width * height) / 18000)));
+      var bubbleCount = Math.max(10, Math.floor(particleCount * 0.28));
+
+      particles = [];
+
+      for (var index = 0; index < particleCount; index += 1) {
+        particles.push(createParticle(index < bubbleCount));
+      }
+    }
+
+    function moveParticle(particle, delta, boost) {
+      var cursorDistanceX = pointer.active ? particle.x - pointer.x : 0;
+      var cursorDistanceY = pointer.active ? particle.y - pointer.y : 0;
+      var cursorDistance = Math.sqrt(cursorDistanceX * cursorDistanceX + cursorDistanceY * cursorDistanceY) || 1;
+      var cursorRange = particle.isBubble ? 220 : 150;
+
+      if (pointer.active && cursorDistance < cursorRange) {
+        var influence = (1 - cursorDistance / cursorRange) * boost * 0.018;
+        particle.x += (cursorDistanceX / cursorDistance) * influence * delta;
+        particle.y += (cursorDistanceY / cursorDistance) * influence * delta;
+      }
+
+      particle.x += particle.vx * delta * boost;
+      particle.y += particle.vy * delta * boost;
+      particle.pulse += particle.pulseSpeed * delta;
+
+      if (particle.x < -particle.radius) {
+        particle.x = width + particle.radius;
+      } else if (particle.x > width + particle.radius) {
+        particle.x = -particle.radius;
+      }
+
+      if (particle.y < -particle.radius) {
+        particle.y = height + particle.radius;
+      } else if (particle.y > height + particle.radius) {
+        particle.y = -particle.radius;
+      }
+    }
+
+    function drawParticle(particle) {
+      var pulse = 1 + Math.sin(particle.pulse) * 0.08;
+      var radius = particle.radius * pulse;
+
+      context.save();
+      context.globalAlpha = particle.alpha;
+
+      if (particle.isBubble) {
+        var gradient = context.createRadialGradient(
+          particle.x - radius * 0.28,
+          particle.y - radius * 0.34,
+          0,
+          particle.x,
+          particle.y,
+          radius
+        );
+
+        gradient.addColorStop(0, particle.color);
+        gradient.addColorStop(1, "rgba(0, 216, 228, 0)");
+        context.fillStyle = gradient;
+      } else {
+        context.fillStyle = particle.color;
+      }
+
+      context.beginPath();
+      context.arc(particle.x, particle.y, radius, 0, Math.PI * 2);
+      context.fill();
+      context.restore();
+    }
+
+    function render(timestamp) {
+      var delta = lastFrame ? Math.min((timestamp - lastFrame) / 16.67, 2.4) : 1;
+      var boost = 1 + Math.min(pointer.speed / 34, 3.8);
+
+      lastFrame = timestamp;
+      pointer.speed *= 0.88;
+
+      context.clearRect(0, 0, width, height);
+
+      particles.forEach(function (particle) {
+        moveParticle(particle, delta, boost);
+        drawParticle(particle);
+      });
+
+      animationFrame = window.requestAnimationFrame(render);
+    }
+
+    function updatePointer(event) {
+      pointer.active = true;
+      pointer.x = event.clientX;
+      pointer.y = event.clientY;
+      pointer.speed = Math.min(
+        120,
+        Math.hypot(pointer.x - pointer.lastX, pointer.y - pointer.lastY)
+      );
+      pointer.lastX = pointer.x;
+      pointer.lastY = pointer.y;
+    }
+
+    window.addEventListener("pointermove", updatePointer, { passive: true });
+    window.addEventListener("pointerleave", function () {
+      pointer.active = false;
+    });
+    window.addEventListener("resize", resizeCanvas);
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden && animationFrame) {
+        window.cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      } else if (!document.hidden && !animationFrame) {
+        lastFrame = 0;
+        animationFrame = window.requestAnimationFrame(render);
+      }
+    });
+
+    resizeCanvas();
+    animationFrame = window.requestAnimationFrame(render);
+  }
+
+  initAmbientBubbles();
+
+  function setHeaderState() {
+    if (!header) {
+      return;
+    }
+
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+  }
+
+  function closeMenu() {
+    if (!navToggle || !navMenu) {
+      return;
+    }
+
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = navToggle.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navMenu.classList.toggle("is-open", isOpen);
+      document.body.classList.toggle("menu-open", isOpen);
+    });
+  }
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  function setActiveNavLink() {
+    if (!trackedNavLinks.length) {
+      return;
+    }
+
+    var headerOffset = header ? header.getBoundingClientRect().bottom + 24 : 0;
+    var activeLink = trackedNavLinks[0];
+
+    trackedNavLinks.forEach(function (link) {
+      var target = document.getElementById(link.getAttribute("href").slice(1));
+
+      if (target && target.getBoundingClientRect().top <= headerOffset) {
+        activeLink = link;
+      }
+    });
+
+    trackedNavLinks.forEach(function (link) {
+      var isActive = link === activeLink;
+
+      link.classList.toggle("nav-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest('a[href^="#"]');
+
+    if (!link) {
+      return;
+    }
+
+    var hash = link.getAttribute("href");
+
+    if (!hash || hash === "#") {
+      return;
+    }
+
+    var target = document.getElementById(decodeURIComponent(hash.slice(1)));
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    closeMenu();
+
+    if (target.id === "hero") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      history.pushState(null, "", hash);
+      return;
+    }
+
+    var headerOffset = header ? header.getBoundingClientRect().bottom + 18 : 0;
+    var targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: "smooth"
+    });
+    history.pushState(null, "", hash);
+  });
+
+  window.addEventListener("scroll", function () {
+    setHeaderState();
+    setActiveNavLink();
+  }, { passive: true });
+  setHeaderState();
+  setActiveNavLink();
+
+  function hidePageSkeleton() {
+    if (!pageSkeleton || pageSkeleton.classList.contains("is-hidden")) {
+      return;
+    }
+
+    pageSkeleton.classList.add("is-hidden");
+    document.body.classList.remove("is-loading");
+  }
+
+  function scheduleSkeletonHide() {
+    window.setTimeout(hidePageSkeleton, 450);
+  }
+
+  if (document.readyState === "complete") {
+    scheduleSkeletonHide();
+  } else {
+    window.addEventListener("load", scheduleSkeletonHide, { once: true });
+    window.setTimeout(hidePageSkeleton, 3200);
+  }
+
+  function loadVideo(video) {
+    if (!video || video.dataset.loaded === "true") {
+      return;
+    }
+
+    var sources = Array.prototype.slice.call(video.querySelectorAll("source[data-src]"));
+
+    sources.forEach(function (source) {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+
+    if (sources.length) {
+      video.load();
+    }
+
+    video.dataset.loaded = "true";
+  }
+
+  function playVideo(video) {
+    if (!video) {
+      return;
+    }
+
+    loadVideo(video);
+    video.muted = false;
+    video.volume = 1;
+    video.play().catch(function () {});
+  }
+
+  if ("IntersectionObserver" in window) {
+    var mediaObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var video = entry.target;
+            loadVideo(video);
+            video.muted = false;
+            video.volume = 1;
+            video.play().catch(function () {});
+            mediaObserver.unobserve(video);
+          }
+        });
+      },
+      { rootMargin: "280px 0px", threshold: 0.05 }
+    );
+
+    lazyVideos.forEach(function (video) {
+      mediaObserver.observe(video);
+    });
+  } else {
+    lazyVideos.forEach(loadVideo);
+  }
+
+  function animateStatCounter(counter) {
+    var targetValue = Number(counter.getAttribute("data-target"));
+    var decimals = Number(counter.getAttribute("data-decimals")) || 0;
+    var startTime = null;
+    var duration = 1100;
+
+    if (!targetValue) {
+      return;
+    }
+
+    function tick(timestamp) {
+      if (!startTime) {
+        startTime = timestamp;
+      }
+
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var currentValue = targetValue * eased;
+
+      counter.textContent = decimals ? currentValue.toFixed(decimals) : String(Math.round(currentValue));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(tick);
+      } else {
+        counter.textContent = decimals ? targetValue.toFixed(decimals) : String(Math.round(targetValue));
+      }
+    }
+
+    window.requestAnimationFrame(tick);
+  }
+
+  statCounters.forEach(animateStatCounter);
+
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.14 }
+    );
+
+    document.querySelectorAll(".reveal").forEach(function (element) {
+      if (element === aboutBenefits) {
+        return;
+      }
+
+      revealObserver.observe(element);
+    });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function (element) {
+      element.classList.add("is-visible");
+    });
+  }
+
+  if (aboutBenefits) {
+    function showAboutBenefits() {
+      if (aboutBenefits.classList.contains("is-about-settled")) {
+        return;
+      }
+
+      aboutBenefits.classList.add("is-visible");
+
+      window.setTimeout(function () {
+        aboutBenefits.classList.add("is-about-settled");
+      }, 2100);
+    }
+
+    if ("IntersectionObserver" in window) {
+      var aboutObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              showAboutBenefits();
+              aboutObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -24% 0px", threshold: 0.36 }
+      );
+
+      aboutObserver.observe(aboutBenefits);
+    } else {
+      showAboutBenefits();
+    }
+  }
+
+  if (processSection) {
+    function runProcessFlow() {
+      if (processSection.dataset.flowPlayed === "true") {
+        return;
+      }
+
+      processSection.dataset.flowPlayed = "true";
+      processSection.classList.add("is-flow-active");
+    }
+
+    if ("IntersectionObserver" in window) {
+      var processObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              runProcessFlow();
+              processObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -18% 0px", threshold: 0.28 }
+      );
+
+      processObserver.observe(processSection);
+    } else {
+      runProcessFlow();
+    }
+  }
+
+  reelSliders.forEach(function (slider) {
+    var slides = Array.prototype.slice.call(slider.querySelectorAll(".reel-slide"));
+    var prevButton = slider.querySelector(".reel-prev");
+    var nextButton = slider.querySelector(".reel-next");
+    var dotsWrap = slider.querySelector(".reel-dots");
+    var currentSlide = 0;
+    var sliderTimer = null;
+    var touchStartX = 0;
+
+    if (!slides.length || !prevButton || !nextButton || !dotsWrap) {
+      return;
+    }
+
+    function slideOffset(index) {
+      var total = slides.length;
+      var offset = (index - currentSlide + total) % total;
+
+      if (offset > total / 2) {
+        offset -= total;
+      }
+
+      return offset;
+    }
+
+    function setReelClasses() {
+      slides.forEach(function (slide, index) {
+        var offset = slideOffset(index);
+
+        slide.className = "reel-slide";
+
+        if (offset === 0) {
+          slide.classList.add("is-active");
+        } else if (offset === -1) {
+          slide.classList.add("is-prev");
+        } else if (offset === 1) {
+          slide.classList.add("is-next");
+        }
+      });
+
+      dotsWrap.querySelectorAll(".reel-dot").forEach(function (dot, index) {
+        dot.classList.toggle("is-active", index === currentSlide);
+        dot.setAttribute("aria-current", index === currentSlide ? "true" : "false");
+      });
+
+      slides.forEach(function (slide, index) {
+        var offset = slideOffset(index);
+        var video = slide.querySelector("video");
+
+        if (!video) {
+          return;
+        }
+
+        if (Math.abs(offset) <= 1) {
+          playVideo(video);
+        } else {
+          video.pause();
+        }
+      });
+    }
+
+    function goToSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      setReelClasses();
+    }
+
+    function restartSliderTimer() {
+      window.clearInterval(sliderTimer);
+      sliderTimer = window.setInterval(function () {
+        goToSlide(currentSlide + 1);
+      }, 3000);
+    }
+
+    slides.forEach(function (_, index) {
+      var dot = document.createElement("button");
+      dot.className = "reel-dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show reel " + (index + 1));
+      dot.addEventListener("click", function () {
+        goToSlide(index);
+        restartSliderTimer();
+      });
+      dotsWrap.appendChild(dot);
+    });
+
+    prevButton.addEventListener("click", function () {
+      goToSlide(currentSlide - 1);
+      restartSliderTimer();
+    });
+
+    nextButton.addEventListener("click", function () {
+      goToSlide(currentSlide + 1);
+      restartSliderTimer();
+    });
+
+    slider.addEventListener("pointerdown", function (event) {
+      touchStartX = event.clientX;
+    });
+
+    slider.addEventListener("pointerup", function (event) {
+      var distance = event.clientX - touchStartX;
+
+      if (Math.abs(distance) > 40) {
+        goToSlide(currentSlide + (distance < 0 ? 1 : -1));
+        restartSliderTimer();
+      }
+    });
+
+    slider.addEventListener("mouseenter", function () {
+      window.clearInterval(sliderTimer);
+    });
+
+    slider.addEventListener("mouseleave", restartSliderTimer);
+
+    setReelClasses();
+    restartSliderTimer();
+  });
+
+  if (workCarousel) {
+    initWorkVideoCarousel(workCarousel);
+  }
+
+  function initWorkVideoCarousel(carousel) {
+    var viewport = carousel.querySelector(".work-viewport");
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll(".work-slide"));
+    var position = 0;
+    var loopWidth = 1;
+    var cardWidth = 1;
+    var gap = 80;
+    var span = 1;
+    var curveDepth = 36;
+    var viewportWidth = 1;
+    var isHovering = false;
+    var isDragging = false;
+    var isInView = false;
+    var lastPointerX = 0;
+    var lastPointerTime = 0;
+    var inertialVelocity = 0;
+    var lastFrameTime = 0;
+    var autoSpeed = 34;
+
+    if (!viewport || !slides.length) {
+      return;
+    }
+
+    slides.forEach(function (slide) {
+      var video = slide.querySelector("video");
+
+      if (!video) {
+        return;
+      }
+
+      video.muted = false;
+      video.volume = 1;
+      video.preload = "none";
+      video.playsInline = true;
+      video.loop = true;
+    });
+
+    function getNumber(value, fallback) {
+      var parsed = parseFloat(value);
+
+      return Number.isFinite(parsed) ? parsed : fallback;
+    }
+
+    function wrap(value, width) {
+      return ((value % width) + width) % width;
+    }
+
+    function measureWorkCarousel() {
+      var styles = window.getComputedStyle(carousel);
+
+      viewportWidth = viewport.clientWidth || carousel.clientWidth || window.innerWidth;
+      cardWidth = slides[0].offsetWidth || getNumber(styles.getPropertyValue("--work-card-width"), 240);
+      gap = getNumber(styles.getPropertyValue("--work-card-gap"), 80);
+      curveDepth = getNumber(styles.getPropertyValue("--work-curve-depth"), 36);
+      span = cardWidth + gap;
+      loopWidth = Math.max(span * slides.length, span);
+      position = wrap(position, loopWidth);
+      renderWorkCarousel();
+    }
+
+    function setWorkVideoState(slide, shouldPlay) {
+      var video = slide.querySelector("video");
+
+      if (!video) {
+        return;
+      }
+
+      if (shouldPlay) {
+        if (video.dataset.workPlaying === "true") {
+          return;
+        }
+
+        loadVideo(video);
+        video.muted = false;
+        video.volume = 1;
+        video.dataset.workPlaying = "true";
+        video.play().catch(function () {});
+      } else {
+        if (video.dataset.workPlaying !== "true") {
+          return;
+        }
+
+        video.dataset.workPlaying = "false";
+        video.pause();
+      }
+    }
+
+    function renderWorkCarousel() {
+      var centerX = viewportWidth / 2;
+
+      slides.forEach(function (slide, index) {
+        var delta = wrap(index * span - position + loopWidth / 2, loopWidth) - loopWidth / 2;
+        var x = centerX + delta - cardWidth / 2;
+        var distance = Math.abs(delta);
+        var scale = 1;
+        var scaledWidth = cardWidth * scale;
+        var leftEdge = x + (cardWidth - scaledWidth) / 2;
+        var rightEdge = leftEdge + scaledWidth;
+        var curveProgress = Math.min(distance / Math.max(viewportWidth * 0.55, cardWidth), 1);
+        var y = curveDepth * (1 - curveProgress * curveProgress);
+        var isVisible = rightEdge >= 0 && leftEdge <= viewportWidth;
+        var isCentered = distance < span * 0.5;
+
+        slide.style.transform = "translate3d(" + x.toFixed(2) + "px, calc(-50% + " + y.toFixed(2) + "px), 0) scale(" + scale.toFixed(3) + ")";
+        slide.style.zIndex = String(Math.max(1, 1000 - Math.round(distance)));
+        slide.classList.toggle("is-visible", isVisible);
+        slide.classList.toggle("is-centered", isCentered);
+        slide.setAttribute("aria-hidden", isVisible ? "false" : "true");
+        setWorkVideoState(slide, isInView && isVisible);
+      });
+    }
+
+    function animateWorkCarousel(time) {
+      var deltaTime = lastFrameTime ? Math.min((time - lastFrameTime) / 1000, 0.05) : 0;
+      var shouldAutoScroll = isInView && !isHovering && !carousel.matches(":hover") && !isDragging;
+
+      lastFrameTime = time;
+
+      if (shouldAutoScroll) {
+        position += autoSpeed * deltaTime;
+      }
+
+      if (!isDragging && Math.abs(inertialVelocity) > 0.2) {
+        position += inertialVelocity * deltaTime;
+        inertialVelocity *= Math.pow(0.9, deltaTime * 60);
+      }
+
+      position = wrap(position, loopWidth);
+      renderWorkCarousel();
+      window.requestAnimationFrame(animateWorkCarousel);
+    }
+
+    function handlePointerDown(event) {
+      isDragging = true;
+      lastPointerX = event.clientX;
+      lastPointerTime = performance.now();
+      inertialVelocity = 0;
+      carousel.classList.add("is-dragging");
+      carousel.setPointerCapture(event.pointerId);
+    }
+
+    function handlePointerMove(event) {
+      var now = performance.now();
+      var deltaX = event.clientX - lastPointerX;
+      var deltaTime = Math.max((now - lastPointerTime) / 1000, 0.016);
+
+      if (!isDragging) {
+        return;
+      }
+
+      position -= deltaX;
+      inertialVelocity = -deltaX / deltaTime;
+      lastPointerX = event.clientX;
+      lastPointerTime = now;
+      position = wrap(position, loopWidth);
+      renderWorkCarousel();
+    }
+
+    function handlePointerUp(event) {
+      if (!isDragging) {
+        return;
+      }
+
+      isDragging = false;
+      carousel.classList.remove("is-dragging");
+
+      if (carousel.hasPointerCapture(event.pointerId)) {
+        carousel.releasePointerCapture(event.pointerId);
+      }
+    }
+
+    function handleWheel(event) {
+      var wheelDelta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+
+      event.preventDefault();
+      position += wheelDelta;
+      inertialVelocity += wheelDelta * 8;
+      position = wrap(position, loopWidth);
+      renderWorkCarousel();
+    }
+
+    carousel.addEventListener("mouseenter", function () {
+      isHovering = true;
+    });
+
+    carousel.addEventListener("mouseleave", function () {
+      isHovering = false;
+    });
+
+    carousel.addEventListener("pointerdown", handlePointerDown);
+    carousel.addEventListener("pointermove", handlePointerMove);
+    carousel.addEventListener("pointerup", handlePointerUp);
+    carousel.addEventListener("pointercancel", handlePointerUp);
+    carousel.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("resize", measureWorkCarousel);
+
+    if ("IntersectionObserver" in window) {
+      var workObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            isInView = entry.isIntersecting;
+            renderWorkCarousel();
+          });
+        },
+        { rootMargin: "120px 0px", threshold: 0.08 }
+      );
+
+      workObserver.observe(carousel);
+    } else {
+      isInView = true;
+    }
+
+    measureWorkCarousel();
+    window.requestAnimationFrame(animateWorkCarousel);
+  }
+
+  if (testimonialSlider) {
+    var reviewCards = Array.prototype.slice.call(testimonialSlider.querySelectorAll(".testimonial-card"));
+    var reviewPrevButton = testimonialSlider.querySelector(".testimonial-prev");
+    var reviewNextButton = testimonialSlider.querySelector(".testimonial-next");
+    var reviewDotsWrap = testimonialSlider.querySelector(".testimonial-dots");
+    var currentReview = 1;
+    var reviewTimer = null;
+    var reviewTouchStartX = 0;
+    var shouldAutoplayReviews = true;
+
+    function reviewOffset(index) {
+      var total = reviewCards.length;
+      var offset = (index - currentReview + total) % total;
+
+      if (offset > total / 2) {
+        offset -= total;
+      }
+
+      return offset;
+    }
+
+    function setReviewClasses() {
+      reviewCards.forEach(function (card, index) {
+        var offset = reviewOffset(index);
+
+        card.className = "testimonial-card";
+        card.setAttribute("aria-hidden", offset === 0 ? "false" : "true");
+        card.setAttribute("tabindex", offset === 0 ? "0" : "-1");
+
+        if (offset === 0) {
+          card.classList.add("is-active");
+        } else if (offset === -1) {
+          card.classList.add("is-prev");
+        } else if (offset === 1) {
+          card.classList.add("is-next");
+        }
+      });
+
+      reviewDotsWrap.querySelectorAll(".testimonial-dot").forEach(function (dot, index) {
+        dot.classList.toggle("is-active", index === currentReview);
+        dot.setAttribute("aria-current", index === currentReview ? "true" : "false");
+      });
+    }
+
+    function goToReview(index) {
+      currentReview = (index + reviewCards.length) % reviewCards.length;
+      setReviewClasses();
+    }
+
+    function stopReviewTimer() {
+      window.clearInterval(reviewTimer);
+    }
+
+    function restartReviewTimer() {
+      stopReviewTimer();
+
+      if (!shouldAutoplayReviews) {
+        return;
+      }
+
+      reviewTimer = window.setInterval(function () {
+        goToReview(currentReview + 1);
+      }, 4200);
+    }
+
+    reviewCards.forEach(function (_, index) {
+      var dot = document.createElement("button");
+      dot.className = "testimonial-dot";
+      dot.type = "button";
+      dot.setAttribute("aria-label", "Show client review " + (index + 1));
+      dot.addEventListener("click", function () {
+        goToReview(index);
+        restartReviewTimer();
+      });
+      reviewDotsWrap.appendChild(dot);
+    });
+
+    reviewPrevButton.addEventListener("click", function () {
+      goToReview(currentReview - 1);
+      restartReviewTimer();
+    });
+
+    reviewNextButton.addEventListener("click", function () {
+      goToReview(currentReview + 1);
+      restartReviewTimer();
+    });
+
+    testimonialSlider.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        goToReview(currentReview - 1);
+        restartReviewTimer();
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        goToReview(currentReview + 1);
+        restartReviewTimer();
+      }
+    });
+
+    testimonialSlider.addEventListener("pointerdown", function (event) {
+      reviewTouchStartX = event.clientX;
+    });
+
+    testimonialSlider.addEventListener("pointerup", function (event) {
+      var distance = event.clientX - reviewTouchStartX;
+
+      if (Math.abs(distance) > 40) {
+        goToReview(currentReview + (distance < 0 ? 1 : -1));
+        restartReviewTimer();
+      }
+    });
+
+    testimonialSlider.addEventListener("mouseenter", stopReviewTimer);
+    testimonialSlider.addEventListener("mouseleave", restartReviewTimer);
+    testimonialSlider.addEventListener("focusin", stopReviewTimer);
+    testimonialSlider.addEventListener("focusout", restartReviewTimer);
+
+    setReviewClasses();
+    restartReviewTimer();
+  }
+
+if (pricingCards.length) {
+    let priceAnimated = false;
+    function formatIndianPrice(value) {
+        return value.toLocaleString("en-IN");
+    }
+
+    function animatePrice(priceElement, targetValue) {
+        let startTime = null;
+        let duration = 1200;
+        let prefix =
+            priceElement.getAttribute("data-price-prefix") || "";
+        function counter(timestamp) {
+            if (!startTime) {
+                startTime = timestamp;
+            }
+            let progress =
+                Math.min(
+                    (timestamp - startTime) / duration,
+                    1
+                );
+            let current =
+                Math.floor(
+                    targetValue * progress
+                );
+            priceElement.innerHTML =
+                prefix +
+                formatIndianPrice(current);
+            if (progress < 1) {
+                requestAnimationFrame(counter);
+            } else {
+                priceElement.innerHTML =
+                    prefix +
+                    formatIndianPrice(targetValue);
+            }
+        }
+        requestAnimationFrame(counter);
+    }
+    function startAllCounters() {
+        if (priceAnimated) {
+            return;
+        }
+        priceAnimated = true;
+        pricingCards.forEach(function(card){
+            let priceElement =
+                card.querySelector(".price");
+            let targetValue =
+                Number(
+                    card.dataset.priceValue
+                );
+            if (
+                priceElement &&
+                targetValue > 0
+            ) {
+                animatePrice(
+                    priceElement,
+                    targetValue
+                );
+            }
+        });
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Observe Pricing Section
+    |--------------------------------------------------------------------------
+    */
+    let pricingSection =
+        document.getElementById(
+            "packages"
+        );
+    if (pricingSection) {
+        let observer =
+            new IntersectionObserver(
+                function(entries){
+                    if(
+                        entries[0].isIntersecting
+                    ){
+                        startAllCounters();
+                        observer.disconnect();
+                    }
+                },
+                {
+                    threshold:0.2
+                }
+            );
+        observer.observe(
+            pricingSection
+        );
+    }
+    /*
+    |--------------------------------------------------------------------------
+    | Only Active Change On Click
+    |--------------------------------------------------------------------------
+    */
+
+
+    pricingCards.forEach(function(card){
+        card.addEventListener(
+            "click",
+            function(){
+                pricingCards.forEach(function(item){
+                    item.classList.remove(
+                        "is-active"
+                    );
+                });
+                card.classList.add(
+                    "is-active"
+                );
+            }
+        );
+    });
+}
+
+  function setFaqItemState(item, isActive) {
+    var button = item.querySelector("button");
+
+    item.classList.toggle("active", isActive);
+
+    if (button) {
+      button.setAttribute("aria-expanded", isActive ? "true" : "false");
+    }
+  }
+
+  function closeFaqItems() {
+    faqItems.forEach(function (item) {
+      setFaqItemState(item, false);
+    });
+  }
+
+  function openFaqItem(item) {
+    closeFaqItems();
+    setFaqItemState(item, true);
+  }
+
+  if (faqItems.length) {
+    if (faqSection) {
+      faqSection.classList.add("is-faq-staged");
+      faqSection.classList.add("is-faq-locking");
+
+      window.requestAnimationFrame(function () {
+        faqSection.classList.remove("is-faq-locking");
+      });
+    }
+
+    closeFaqItems();
+
+    faqItems.forEach(function (item) {
+      var button = item.querySelector("button");
+
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener("click", function () {
+        var isActive = item.classList.contains("active");
+
+        if (isActive) {
+          setFaqItemState(item, false);
+        } else {
+          openFaqItem(item);
+        }
+      });
+    });
+  }
+
+  if (faqSection && faqItems.length) {
+    function openFirstFaqOnView() {
+      if (faqSection.dataset.faqOpened === "true") {
+        return;
+      }
+
+      faqSection.dataset.faqOpened = "true";
+      faqSection.classList.add("is-faq-ready");
+
+      window.setTimeout(function () {
+        openFaqItem(faqItems[0]);
+      }, 1320);
+    }
+
+    if ("IntersectionObserver" in window) {
+      var faqTrigger = faqList || faqSection;
+      var faqObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              openFirstFaqOnView();
+              faqObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -22% 0px", threshold: 0.34 }
+      );
+
+      faqObserver.observe(faqTrigger);
+    } else {
+      openFirstFaqOnView();
+    }
+  }
+
+  function markInvalid(field) {
+    field.classList.add("field-error");
+  }
+
+  function clearInvalid(field) {
+    field.classList.remove("field-error");
+  }
+
+  if (bookingForm && formMessage) {
+    bookingForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var fields = Array.prototype.slice.call(bookingForm.querySelectorAll("input, select, textarea"));
+      var requiredFields = fields.filter(function (field) {
+        return field.hasAttribute("required");
+      });
+      var firstInvalid = null;
+
+      fields.forEach(clearInvalid);
+
+      requiredFields.forEach(function (field) {
+        if (!field.checkValidity()) {
+          markInvalid(field);
+          if (!firstInvalid) {
+            firstInvalid = field;
+          }
+        }
+      });
+
+      if (firstInvalid) {
+        formMessage.textContent = "Please complete the highlighted fields before sending.";
+        formMessage.className = "form-message error";
+        firstInvalid.focus();
+        return;
+      }
+
+      formMessage.textContent = "Thanks. Your placeholder booking request is ready for integration.";
+      formMessage.className = "form-message success";
+      bookingForm.reset();
+    });
+
+    bookingForm.querySelectorAll("input, select, textarea").forEach(function (field) {
+      field.addEventListener("input", function () {
+        if (field.checkValidity()) {
+          clearInvalid(field);
+        }
+      });
+    });
+  }
+
+  if ("serviceWorker" in navigator && window.location.protocol !== "file:") {
+    window.addEventListener("load", function () {
+      var serviceWorkerPath = activeScript
+        ? activeScript.getAttribute("data-service-worker") || "assets/js/moments-service-worker.js"
+        : "assets/js/moments-service-worker.js";
+      var cacheResetVersion = "moments-service-worker-v20";
+      var cacheResetKey = "moments-cache-reset-" + cacheResetVersion;
+
+      function registerServiceWorker() {
+        return navigator.serviceWorker
+          .register(serviceWorkerPath + "?v=" + cacheResetVersion, { scope: "./" })
+          .catch(function () {});
+      }
+
+      if ("caches" in window && window.localStorage.getItem(cacheResetKey) !== "done") {
+        caches.keys()
+          .then(function (keys) {
+            return Promise.all(
+              keys.map(function (key) {
+                return caches.delete(key);
+              })
+            );
+          })
+          .then(function () {
+            window.localStorage.setItem(cacheResetKey, "done");
+            return registerServiceWorker();
+          })
+          .then(function () {
+            window.location.reload();
+          })
+          .catch(function () {
+            registerServiceWorker();
+          });
+        return;
+      }
+
+      registerServiceWorker();
+    });
+  }
+
+
+
+   let videos = document.querySelectorAll(".phone-video");
+    let current = 0;
+    
+    setInterval(()=>{
+    
+        videos[current].classList.remove("active");
+    
+        current = (current + 1) % videos.length;
+    
+        videos[current].classList.add("active");
+    
+    },4000);
+
+})();

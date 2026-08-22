@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Moments - By MQLUS</title>
-    <link rel="stylesheet" href="moments.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=DM%20Sans:700,600,500,400&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="moments.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -15,7 +20,7 @@
         <div class="header-inner">
             <div class="header-logo">
                 <a href="/">
-                    <img src="images/logo.svg" alt="PixVerse Production" width="150" height="auto">
+                    <img src="images/image.png" alt="PixVerse Production" width="auto" height="auto">
                 </a>
             </div>
 
@@ -36,7 +41,7 @@
 
             <div class="header-cta">
                 <a href="#contact">
-                    <span>GET IN TOUCH</span>
+                    <span>Book Now</span>
                     <span class="arrow">↗</span>
                 </a>
             </div>
@@ -68,23 +73,22 @@
         <!-- HERO -->
         <section class="hero-section" aria-label="Intro">
             <div class="hero-heading-wrap">
-                <span class="hero-subtitle">JOIN OVER 100,000 HAPPY CUSTOMERS</span>
+                <span class="hero-subtitle">A Venture By MQlus</span>
                 <h1 class="hero-title">
-                    Grow Your Brand with <br>
+                    Your moment <br>
                     <span class="highlight">
-                        
-                        <span class="highlight-text">Stunning</span>
+
+                        <span class="highlight-text">deserves</span>
                         <span class="highlight-underline"></span>
                     </span>
-                    Video
+                    Moments
                 </h1>
                 <p class="hero-desc">
-                    Boost your brand with High-impact Videos from our experts content creators.
-                    Our team is ready to propel you business forward
+                    We capture your moments and transform them into cinematic reels you'll love to watch and share.
                 </p>
                 <div class="hero-decorations">
-                    <img loading="lazy" decoding="async" width="133" height="57" src="images/elevate.svg" alt="elevate your brand">
-                    <img loading="lazy" decoding="async" width="147" height="89" src="images/Arrowjws.svg" alt="arrow">
+                    <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="elevate your brand">
+                    <img loading="lazy" decoding="async" width="147" height="89" src="images/887e0c5a-4511-4997-9532-657d64a04288.png" alt="arrow">
                 </div>
             </div>
         </section>
@@ -102,10 +106,6 @@
                     <span class="btn-text">start project</span>
                     <span class="btn-icon">↗</span>
                 </a>
-                <div class="action-decorations">
-                    <img loading="lazy" decoding="async" width="112" height="61" src="images/Free-consultant.svg" alt="free consultant">
-                    <img loading="lazy" decoding="async" width="92" height="39" src="images/animation_arrow.svg" alt="animation arrow">
-                </div>
             </div>
         </section>
 
@@ -113,30 +113,34 @@
         <section class="stats-section" aria-label="Company stats">
             <div class="container">
                 <div class="stats-grid">
+
                     <div class="stat-item">
-                        <span class="stat-number" data-to="4.9">0</span>
-                        <h5>Client reviews</h5>
-                        <p>We offer a full range of video services tailored to businesses of all sizes</p>
+                        <span class="stat-number" data-to="500" data-suffix="+">0</span>
+                        <h5>Reel Shot</h5>
+                        <p>Creative reels produced for brands, businesses, and social media campaigns.</p>
                     </div>
+
                     <div class="stat-item">
-                        <span class="stat-number" data-to="3" data-suffix="K+">0</span>
-                        <h5>Client reviews</h5>
-                        <p>We offer a full range of video services tailored to businesses of all sizes</p>
+                        <span class="stat-number" data-to="4.9" data-suffix="☆">0</span>
+                        <h5>Avg. Rating</h5>
+                        <p>Highly rated video production focused on quality, creativity, and client satisfaction.</p>
                     </div>
+
                     <div class="stat-item">
-                        <span class="stat-number" data-to="99" data-suffix="%">0</span>
-                        <h5>Client reviews</h5>
-                        <p>We offer a full range of video services tailored to businesses of all sizes</p>
+                        <span class="stat-number" data-to="10" data-suffix="+">0</span>
+                        <h5>Trained Creators</h5>
+                        <p>Skilled creators bringing fresh ideas, professional shooting, and creative storytelling.</p>
                     </div>
+
                     <div class="stat-item">
-                        <span class="stat-number" data-to="24" data-suffix="/7">0</span>
-                        <h5>Client reviews</h5>
-                        <p>We offer a full range of video services tailored to businesses of all sizes</p>
+                        <span class="stat-number" data-to="7" data-suffix="+">0</span>
+                        <h5>Years Of Experience</h5>
+                        <p>Years of experience delivering professional videos, reels, and visual content for brands.</p>
                     </div>
+
                 </div>
             </div>
         </section>
-
         <!-- DECORATION LINE -->
         <div class="marquee-line">
             <img decoding="async" src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/01/Decoration-Line.png" alt="" loading="lazy">
@@ -183,9 +187,9 @@
             <div class="pricing-header">
                 <div class="pricing-title">
                     <h2>
-                        Service
-                        <img src="images/thumb_services-1-118x68.jpg" alt="services">
-                        &amp; Pricing
+                        Pick how you want it
+                        <img src="images/a1aee086-67f4-4af9-bd14-39a79d2d5948.png" alt="services">
+                        &amp;Captured
                     </h2>
                     <div class="desc">
                         We bring bold visions to life through a fusion of strategy, design, and storytelling.
@@ -208,8 +212,8 @@
                 <div class="pricing-item active" data-order="1">
                     <div class="pricing-item-header">
                         <div>
-                            <h4 class="pricing-item-title">Commercials</h4>
-                            <span class="pricing-item-year">/001/</span>
+                            <h4 class="pricing-item-title">Quick Reel</h4>
+                            <span class="pricing-item-year">Book Quick Reel</span>
                             <div class="pricing-item-media">
                                 <video controls playsinline autoplay muted loop>
                                     <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/Bloink.mp4" type="video/mp4">
@@ -229,15 +233,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pricing-item-price">$2,200+</div>
+                    <div class="pricing-item-price">₹1,699</div>
                 </div>
 
                 <!-- Corporate Video -->
                 <div class="pricing-item" data-order="2">
                     <div class="pricing-item-header">
                         <div>
-                            <h4 class="pricing-item-title">Corporate Video</h4>
-                            <span class="pricing-item-year">/002/</span>
+                            <h4 class="pricing-item-title">Wedding Package</h4>
+                            <span class="pricing-item-year">Starting at ₹69,999</span>
                             <div class="pricing-item-media">
                                 <video controls playsinline muted loop>
                                     <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/Charlote-Beauty.mp4" type="video/mp4">
@@ -257,7 +261,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pricing-item-price">$2,500+</div>
+                    <div class="pricing-item-price">$69,999+</div>
                 </div>
 
                 <!-- Animation -->
@@ -633,16 +637,24 @@
                     </form>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-                            <svg viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                            <svg viewBox="0 0 320 512">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                            </svg>
                         </a>
                         <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)">
-                            <svg viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                            <svg viewBox="0 0 512 512">
+                                <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                            </svg>
                         </a>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-                            <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
+                            <svg viewBox="0 0 448 512">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z" />
+                            </svg>
                         </a>
                         <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
-                            <svg viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            <svg viewBox="0 0 576 512">
+                                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -685,7 +697,7 @@
             <div class="footer-bottom">
                 <div class="footer-logo">
                     <a href="/">
-                        <img width="700" height="74" src="images/Logo-mark (1).svg" alt="PixVerse" decoding="async">
+                        <img width="700" height="74" src="images/logo-header (1).webp" alt="PixVerse" decoding="async">
                     </a>
                 </div>
                 <div class="footer-bottom-text">
@@ -697,7 +709,8 @@
     </footer>
 
 
-<script src="moments.js"></script>
+    <script src="moments.js"></script>
 
 </body>
+
 </html>

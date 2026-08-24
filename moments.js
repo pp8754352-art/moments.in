@@ -53,61 +53,6 @@
     });
 
     /* -----------------------------------------------------
-       PRICING TOGGLE + EXPAND
-    ----------------------------------------------------- */
-    // Expand/collapse on header click
-    document.querySelectorAll('.pricing-item-header').forEach(function (header) {
-        header.addEventListener('click', function () {
-            var item = this.closest('.pricing-item');
-            var wasActive = item.classList.contains('active');
-            item.parentElement.querySelectorAll('.pricing-item').forEach(function (el) {
-                el.classList.remove('active');
-            });
-            if (!wasActive) item.classList.add('active');
-        });
-    });
-
-    // Project/Monthly toggle
-    var toggleInput = document.getElementById('pricingToggle');
-    var labels = document.querySelectorAll('.toggle-label');
-    var list = document.getElementById('pricingList');
-
-    var monthlyOrder = ['2', '4', '1', '3'];
-    var projectOrder = ['1', '2', '3', '4'];
-
-    function applyOrder(order) {
-        if (!list) return;
-        order.forEach(function (id) {
-            var el = list.querySelector('[data-order="' + id + '"]');
-            if (el) list.appendChild(el);
-        });
-        list.querySelectorAll('.pricing-item').forEach(function (el, i) {
-            el.classList.toggle('active', i === 0);
-        });
-    }
-
-    if (toggleInput) {
-        toggleInput.addEventListener('change', function () {
-            var isMonthly = toggleInput.checked;
-            labels.forEach(function (label) {
-                var mode = label.getAttribute('data-mode');
-                label.classList.toggle('active', (mode === 'monthly') === isMonthly);
-            });
-            list.setAttribute('data-mode', isMonthly ? 'monthly' : 'project');
-            applyOrder(isMonthly ? monthlyOrder : projectOrder);
-        });
-    }
-
-    labels.forEach(function (label) {
-        label.addEventListener('click', function () {
-            if (!toggleInput) return;
-            var mode = label.getAttribute('data-mode');
-            toggleInput.checked = (mode === 'monthly');
-            toggleInput.dispatchEvent(new Event('change'));
-        });
-    });
-
-    /* -----------------------------------------------------
        STAT COUNTERS
     ----------------------------------------------------- */
     var counters = document.querySelectorAll('.stat-number');
@@ -259,22 +204,19 @@
         });
     })();
 
-    /* -----------------------------------------------------
-       CONTACT FORM
-    ----------------------------------------------------- */
-    var contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (!contactForm.checkValidity()) {
-                contactForm.reportValidity();
-                return;
-            }
-            // TODO: replace with a real fetch() call to your backend
-            alert('Thanks! Your message has been received.');
-            contactForm.reset();
-        });
-    }
+var contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+        // TODO: replace with a real fetch() call to your backend
+        alert('Thanks! Your message has been received.');
+        contactForm.reset();
+    });
+}
 
     /* -----------------------------------------------------
        NEWSLETTER FORM

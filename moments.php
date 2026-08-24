@@ -20,7 +20,7 @@
         <div class="header-inner">
             <div class="header-logo">
                 <a href="/">
-                    <img src="images/image.png" alt="PixVerse Production" width="auto" height="auto">
+                    <img src="images/image.png" alt="Moments" width="auto" height="auto">
                 </a>
             </div>
 
@@ -78,17 +78,19 @@
                     Your moment <br>
                     <span class="highlight">
 
-                        <span class="highlight-text">deserves</span>
+                        <span class="highlight-text"> deserves</span>
                         <span class="highlight-underline"></span>
                     </span>
                     Moments
                 </h1>
-                <p class="hero-desc">
-                    We capture your moments and transform them into cinematic reels you'll love to watch and share.
-                </p>
-                <div class="hero-decorations">
-                    <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="elevate your brand">
-                    <img loading="lazy" decoding="async" width="147" height="89" src="images/887e0c5a-4511-4997-9532-657d64a04288.png" alt="arrow">
+                <div class="hero-desc-row">
+                    <p class="hero-desc">
+                        We capture your moments and transform them into cinematic reels you'll love to watch and share.
+                    </p>
+                    <div class="hero-decorations">
+                        <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="our work">
+                        <img loading="lazy" decoding="async" width="147" height="89" src="images/Arrowjws.svg" alt="arrow to work section">
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,11 +143,22 @@
                 </div>
             </div>
         </section>
-        <!-- DECORATION LINE -->
-        <div class="marquee-line">
-            <img decoding="async" src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/01/Decoration-Line.png" alt="" loading="lazy">
-        </div>
 
+        <!-- DECORATION LINE - RIGHT TO LEFT SCROLL -->
+<div class="marq">
+    <div class="wrapper">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+    </div>
+</div>
         <!-- GLOBAL BRANDS -->
         <section class="brands-section" aria-label="Trusted brands">
             <div class="brands-inner">
@@ -177,269 +190,307 @@
             </div>
         </section>
 
-        <!-- DECORATION LINE -->
-        <div class="marquee-line">
-            <img decoding="async" src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/01/Decoration-Line.png" alt="" loading="lazy">
+        <!-- DECORATION LINE - RIGHT TO LEFT SCROLL -->
+<div class="marq">
+    <div class="wrapper">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+    </div>
+</div>
+
+
+      <!-- ============================================================
+SERVICE & PRICING - ALL EXPANDED
+============================================================ -->
+<section class="pricing-section" id="pricing" aria-label="Services and pricing">
+    <div class="pricing-header">
+        <div class="pricing-title">
+            <h2>
+                Pick how you want it
+                &amp;Captured
+            </h2>
+            <div class="desc">
+                We bring bold visions to life through a fusion of strategy, design, and storytelling.
+                <br>We partner with brands, founders, and creators to shape identities.
+            </div>
+        </div>
+        <div class="pricing-toggle">
+            <div class="toggle-wrapper">
+                <span class="toggle-label active" data-mode="project">Project-based</span>
+                <span class="toggle-label" data-mode="monthly">Monthly</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing-list" id="pricingList">
+        <!-- Quick Reel -->
+        <div class="pricing-item active" data-order="1">
+            <div class="pricing-item-header">
+                <h4 class="pricing-item-title">Quick Reel</h4>
+                <span class="pricing-item-year">Book Quick Reel</span>
+            </div>
+            <div class="pricing-item-body">
+                <div class="pricing-item-desc">
+                    <p>Perfect for small celebrations and personal moments.</p>
+                </div>
+                <div class="pricing-item-cats">
+                    <span class="pricing-item-cat">Up to 2 Hours Coverage</span>
+                    <span class="pricing-item-cat">Professional Videography</span>
+                    <span class="pricing-item-cat">1 Edited Reel (25–40 sec)</span>
+                    <span class="pricing-item-cat">Digital Delivery</span>
+                </div>
+            </div>
+            <div class="pricing-item-price">₹1,699</div>
         </div>
 
-        <!-- SERVICE & PRICING -->
-        <section class="pricing-section" id="pricing" aria-label="Services and pricing">
-            <div class="pricing-header">
-                <div class="pricing-title">
-                    <h2>
-                        Pick how you want it
-                        <img src="images/a1aee086-67f4-4af9-bd14-39a79d2d5948.png" alt="services">
-                        &amp;Captured
-                    </h2>
-                    <div class="desc">
-                        We bring bold visions to life through a fusion of strategy, design, and storytelling.
-                        <br>We partner with brands, founders, and creators to shape identities.
-                    </div>
+        <!-- Extended Package -->
+        <div class="pricing-item active" data-order="3">
+            <div class="pricing-item-header">
+                <h4 class="pricing-item-title">Extended Package</h4>
+                <span class="pricing-item-year">Book Extended Package (Most Recommended)</span>
+            </div>
+            <div class="pricing-item-body">
+                <div class="pricing-item-desc">
+                    <p>Ideal for birthdays, family functions, and special occasions.</p>
                 </div>
-                <div class="pricing-toggle">
-                    <div class="toggle-wrapper">
-                        <span class="toggle-label active" data-mode="project">Project-based</span>
-                        <label class="sr-only">
-                            <input class="toggle-input" type="checkbox" id="pricingToggle">
-                        </label>
-                        <span class="toggle-label" data-mode="monthly">Monthly</span>
-                    </div>
+                <div class="pricing-item-cats">
+                    <span class="pricing-item-cat">Up to 5 Hours Coverage</span>
+                    <span class="pricing-item-cat">Professional Videography</span>
+                    <span class="pricing-item-cat">3 Cinematic Reels</span>
+                    <span class="pricing-item-cat">Highlight Video</span>
+                    <span class="pricing-item-cat">Digital Delivery</span>
                 </div>
             </div>
+            <div class="pricing-item-price">₹4,499</div>
+        </div>
 
-            <div class="pricing-list" id="pricingList" data-mode="project">
-                <!-- Commercials -->
-                <div class="pricing-item active" data-order="1">
-                    <div class="pricing-item-header">
-                        <div>
-                            <h4 class="pricing-item-title">Quick Reel</h4>
-                            <span class="pricing-item-year">Book Quick Reel</span>
-                            <div class="pricing-item-media">
-                                <video controls playsinline autoplay muted loop>
-                                    <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/Bloink.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="pricing-item-desc">
-                                <p>Short video content driven by creative storytelling. Make a lasting impression on your audience with our videos. As a video agency, we'll ensure your video meets your marketing needs and fits into your strategy.</p>
-                            </div>
-                            <div class="pricing-item-cats">
-                                <a href="#" class="pricing-item-cat">Graphic Design</a>
-                                <a href="#" class="pricing-item-cat">Brand Name</a>
-                                <a href="#" class="pricing-item-cat">Logo Design</a>
-                                <a href="#" class="pricing-item-cat">Voice and Tone</a>
-                                <a href="#" class="pricing-item-cat">Talent casting</a>
-                                <a href="#" class="pricing-item-cat">Wardrobe styling</a>
-                                <a href="#" class="pricing-item-cat">Hair and makeup</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-item-price">₹1,699</div>
+        <!-- Quick Add-On -->
+        <div class="pricing-item active" data-order="4">
+            <div class="pricing-item-header">
+                <h4 class="pricing-item-title">Quick Add-On</h4>
+                <span class="pricing-item-year">Add to Booking</span>
+            </div>
+            <div class="pricing-item-body">
+                <div class="pricing-item-desc">
+                    <p>Need a little extra coverage? Extend your shoot to capture those additional moments that matter.</p>
                 </div>
-
-                <!-- Corporate Video -->
-                <div class="pricing-item" data-order="2">
-                    <div class="pricing-item-header">
-                        <div>
-                            <h4 class="pricing-item-title">Wedding Package</h4>
-                            <span class="pricing-item-year">Starting at ₹69,999</span>
-                            <div class="pricing-item-media">
-                                <video controls playsinline muted loop>
-                                    <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/Charlote-Beauty.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="pricing-item-desc">
-                                <p>Short video content driven by creative storytelling. Make a lasting impression on your audience with our videos. As a video agency, we'll ensure your video meets your marketing needs and fits into your strategy.</p>
-                            </div>
-                            <div class="pricing-item-cats">
-                                <a href="#" class="pricing-item-cat">Graphic Design</a>
-                                <a href="#" class="pricing-item-cat">Brand Name</a>
-                                <a href="#" class="pricing-item-cat">Logo Design</a>
-                                <a href="#" class="pricing-item-cat">Voice and Tone</a>
-                                <a href="#" class="pricing-item-cat">Talent casting</a>
-                                <a href="#" class="pricing-item-cat">Wardrobe styling</a>
-                                <a href="#" class="pricing-item-cat">Hair and makeup</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-item-price">$69,999+</div>
-                </div>
-
-                <!-- Animation -->
-                <div class="pricing-item" data-order="3">
-                    <div class="pricing-item-header">
-                        <div>
-                            <h4 class="pricing-item-title">Animation</h4>
-                            <span class="pricing-item-year">/003/</span>
-                            <div class="pricing-item-media">
-                                <video controls playsinline muted loop>
-                                    <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/PastryClass.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="pricing-item-desc">
-                                <p>Short video content driven by creative storytelling. Make a lasting impression on your audience with our videos. As a video agency, we'll ensure your video meets your marketing needs and fits into your strategy.</p>
-                            </div>
-                            <div class="pricing-item-cats">
-                                <a href="#" class="pricing-item-cat">Graphic Design</a>
-                                <a href="#" class="pricing-item-cat">Brand Name</a>
-                                <a href="#" class="pricing-item-cat">Logo Design</a>
-                                <a href="#" class="pricing-item-cat">Voice and Tone</a>
-                                <a href="#" class="pricing-item-cat">Talent casting</a>
-                                <a href="#" class="pricing-item-cat">Wardrobe styling</a>
-                                <a href="#" class="pricing-item-cat">Hair and makeup</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-item-price">$3,200+</div>
-                </div>
-
-                <!-- Event -->
-                <div class="pricing-item" data-order="4">
-                    <div class="pricing-item-header">
-                        <div>
-                            <h4 class="pricing-item-title">Event</h4>
-                            <span class="pricing-item-year">/004/</span>
-                            <div class="pricing-item-media">
-                                <video controls playsinline muted loop>
-                                    <source src="https://pixverse.jwsuperthemes.com/wp-content/uploads/2026/02/model.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <div class="pricing-item-desc">
-                                <p>Short video content driven by creative storytelling. Make a lasting impression on your audience with our videos. As a video agency, we'll ensure your video meets your marketing needs and fits into your strategy.</p>
-                            </div>
-                            <div class="pricing-item-cats">
-                                <a href="#" class="pricing-item-cat">Graphic Design</a>
-                                <a href="#" class="pricing-item-cat">Brand Name</a>
-                                <a href="#" class="pricing-item-cat">Logo Design</a>
-                                <a href="#" class="pricing-item-cat">Voice and Tone</a>
-                                <a href="#" class="pricing-item-cat">Talent casting</a>
-                                <a href="#" class="pricing-item-cat">Wardrobe styling</a>
-                                <a href="#" class="pricing-item-cat">Hair and makeup</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pricing-item-price">$2,000+</div>
+                <div class="pricing-item-cats">
+                    <span class="pricing-item-cat">Extra 30 Minutes of Coverage</span>
+                    <span class="pricing-item-cat">More Candid Moments</span>
+                    <span class="pricing-item-cat">Additional Cinematic Clips</span>
+                    <span class="pricing-item-cat">Perfect for Last-Minute Extensions</span>
                 </div>
             </div>
-        </section>
+            <div class="pricing-item-price">₹999</div>
+        </div>
+
+        <!-- Wedding Package -->
+        <div class="pricing-item active" data-order="2">
+            <div class="pricing-item-header">
+                <h4 class="pricing-item-title">Wedding Package</h4>
+                <span class="pricing-item-year">Book Wedding Package</span>
+            </div>
+            <div class="pricing-item-body">
+                <div class="pricing-item-desc">
+                    <p>Every wedding is a once-in-a-lifetime celebration filled with unforgettable moments.</p>
+                </div>
+                <div class="pricing-item-cats">
+                    <span class="pricing-item-cat">Covers the Entire Wedding Celebration</span>
+                    <span class="pricing-item-cat">Shot on iPhone / Samsung Galaxy S25 Ultra</span>
+                    <span class="pricing-item-cat">25 Premium Reels</span>
+                    <span class="pricing-item-cat">Priority Delivery</span>
+                    <span class="pricing-item-cat">Interaction Videos with Complimentary Mobile Portraits</span>
+                    <span class="pricing-item-cat">Cinematic Highlight Film</span>
+                </div>
+            </div>
+            <div class="pricing-item-price">₹69,999</div>
+        </div>
+
+        <!-- Custom Package -->
+        <div class="pricing-item active" data-order="5">
+            <div class="pricing-item-header">
+                <h4 class="pricing-item-title">Custom Package</h4>
+                <span class="pricing-item-year">Request Custom Quote</span>
+            </div>
+            <div class="pricing-item-body">
+                <div class="pricing-item-desc">
+                    <p>Every event is unique. We'll create a package tailored to your requirements.</p>
+                </div>
+                <div class="pricing-item-cats">
+                    <span class="pricing-item-cat">Corporate Events</span>
+                    <span class="pricing-item-cat">Brand Launches</span>
+                    <span class="pricing-item-cat">Pre-Wedding Shoots</span>
+                    <span class="pricing-item-cat">Special Occasions</span>
+                    <span class="pricing-item-cat">Fully Customizable</span>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
 
         <!-- PROCESS -->
         <section class="process-section" aria-label="Our process">
             <div class="process-container">
                 <div class="process-header">
-                    <div class="process-label">PROCESS</div>
+                    <div class="process-label">How It Works</div>
                     <div class="process-heading">
-                        <h2>3 Simple Steps to<br>Transform Your Marketing</h2>
+                        <h2>Book. Capture. Relive.<br></h2>
                     </div>
                 </div>
                 <div class="process-grid">
                     <div class="process-item">
                         <div class="process-title-row">
-                            <h3>Agreement</h3>
+                            <h3>Book Your Date</h3>
                             <span>01</span>
                         </div>
-                        <p>Submits proposal to client, detailing the creative and logistical approach for the production. Client approves proposal and we make it official with a signed contract.</p>
+                        <p>Select your date and share your event details.</p>
                         <div class="process-icon"><img src="images/Handshake.svg" alt="Handshake"></div>
                     </div>
                     <div class="process-item">
                         <div class="process-title-row">
-                            <h3>Creative Development</h3>
+                            <h3>Booked Confirmed</h3>
                             <span>02</span>
                         </div>
-                        <p>Our writers finish brainstorming ideas, scripting, storyboarding, and developing the visual look.</p>
+                        <p>We confirm your booking and finalize every detail.</p>
                         <div class="process-icon"><img src="images/VideoCamera.svg" alt="Video Camera"></div>
                     </div>
                     <div class="process-item">
                         <div class="process-title-row">
-                            <h3>Pre-Production</h3>
+                            <h3>Capture Moments</h3>
                             <span>03</span>
                         </div>
-                        <p>We cast actors, location scout, finalize video crew, equipment rentals, vendor procurement, insurances, permits, set design &amp; build, and wardrobe.</p>
+                        <p>Captured with cinematic precision.</p>
                         <div class="process-icon"><img src="images/FilmStrip.svg" alt="Film Strip"></div>
                     </div>
                     <div class="process-item">
                         <div class="process-title-row">
-                            <h3>Production</h3>
+                            <h3>Receive & Share</h3>
                             <span>04</span>
                         </div>
-                        <p>Lights, camera, action! Our directors work with crew and cast to capture all video needed.</p>
+                        <p>Edited reels, delivered and ready to share.</p>
                         <div class="process-icon"><img src="images/Faders.svg" alt="Faders"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- ============================================================
+CONTACT - UPDATED WITH NEW FIELDS
+============================================================ -->
         <section class="contact-section" id="contact" aria-label="Contact us">
             <div class="contact-layout">
                 <div class="contact-left">
                     <div>
-                        <div class="contact-badge">GET IN TOUCH</div>
-                        <h2>Fill in the form and we'll be in touch to chat about your project, pricing, and timelines.</h2>
+                        <div class="contact-badge">Book your moment</div>
+                        <h2>Let's Create Something Memorable.</h2>
                     </div>
                     <div class="contact-info">
                         <div class="contact-info-box">
-                            <h4>Talk to us</h4>
-                            <p><a href="mailto:hi@PixVerse.studio">hi@PixVerse.studio</a></p>
-                            <p><a href="tel:12557895353">+1 255 789 5353</a></p>
+                            <h4>📧 Email</h4>
+                            <p><a href="mailto:connect@mqlus.in">connect@mqlus.in</a></p>
+                            <p style="font-size:13px; color:rgba(255,255,255,0.5);">Send references or event notes</p>
                         </div>
                         <div class="contact-info-box">
-                            <h4>Head office</h4>
-                            <p>250 Broadway, San Francisco, CA 92354 United States</p>
+                            <h4>📞 Phone</h4>
+                            <p><a href="tel:+9183490098">+91 83490098</a></p>
+                            <p style="font-size:13px; color:rgba(255,255,255,0.5);">Quick confirmation on WhatsApp</p>
+                        </div>
+                        <div class="contact-info-box">
+                            <h4>📍 Location</h4>
+                            <p>73, Scheme 103, Kesar Bag,<br>Indore, Madhya Pradesh 452009</p>
+                            <p style="font-size:13px; color:rgba(255,255,255,0.5);">Available for local event shoots</p>
+                        </div>
+                        <div class="contact-info-box">
+                            <h4>🎯 Event Preferences</h4>
+                            <p style="font-size:13px; color:rgba(255,255,255,0.6);">Let us know your event details, important moments, and any special instructions.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-right">
-                    <h3>Have a project in mind?</h3>
-                    <p>Whether you're launching a brand, designing a product, or elevating your digital presence, we're here to bring your vision to life.</p>
+                    <h3>Share your vision, date, & venue.</h3>
+                    <p>We'll turn into memories you'll cherish forever.</p>
 
                     <form id="contactForm" novalidate>
                         <div class="form-row">
+                            <!-- Name -->
                             <div class="form-group">
                                 <p>
-                                    <label for="cf-name">Name</label>
-                                    <input type="text" id="cf-name" name="your-name" placeholder="Your name*" required>
+                                    <label for="cf-name">Your name *</label>
+                                    <input type="text" id="cf-name" name="your-name" placeholder="Full name" required>
                                 </p>
                             </div>
+
+                            <!-- Email -->
                             <div class="form-group">
                                 <p>
-                                    <label for="cf-email">Email</label>
-                                    <input type="email" id="cf-email" name="email" placeholder="Your email *" required>
+                                    <label for="cf-email">Email *</label>
+                                    <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
                                 </p>
                             </div>
+
+                            <!-- Phone -->
                             <div class="form-group">
                                 <p>
-                                    <label for="cf-budget">Budget</label>
-                                    <select id="cf-budget" name="budget">
-                                        <option value="">Select budget</option>
-                                        <option value="$300 – $800">$300 – $800</option>
-                                        <option value="$800 – $2,000">$800 – $2,000</option>
-                                        <option value="$2,000 – $5,000+">$2,000 – $5,000+</option>
+                                    <label for="cf-phone">Phone *</label>
+                                    <input type="tel" id="cf-phone" name="phone" placeholder="+91 90000 00000" required>
+                                </p>
+                            </div>
+
+                            <!-- Event Type -->
+                            <div class="form-group">
+                                <p>
+                                    <label for="cf-event-type">Event type *</label>
+                                    <select id="cf-event-type" name="event-type" required>
+                                        <option value="">Select event</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Wedding Function">Wedding Function</option>
+                                        <option value="Store Launch">Store Launch</option>
+                                        <option value="Product Moment">Product Moment</option>
+                                        <option value="Others">Others</option>
                                     </select>
                                 </p>
                             </div>
+
+                            <!-- City -->
                             <div class="form-group">
                                 <p>
-                                    <label for="cf-services">Services</label>
-                                    <select id="cf-services" name="services">
-                                        <option value="Commercials">Commercials</option>
-                                        <option value="Corporate Video">Corporate Video</option>
-                                        <option value="Animation">Animation</option>
-                                        <option value="Events">Events</option>
-                                    </select>
+                                    <label for="cf-city">City *</label>
+                                    <input type="text" id="cf-city" name="city" placeholder="Your city" required>
                                 </p>
                             </div>
+
+                            <!-- Event Date -->
+                            <div class="form-group">
+                                <p>
+                                    <label for="cf-date">Event date *</label>
+                                    <input type="date" id="cf-date" name="event-date" required>
+                                </p>
+                            </div>
+
+                            <!-- Message -->
                             <div class="form-group full">
                                 <p>
-                                    <label for="cf-message">Message</label>
-                                    <textarea id="cf-message" name="message" placeholder="Type your message here"></textarea>
+                                    <label for="cf-message">Anything else?</label>
+                                    <textarea id="cf-message" name="message" placeholder="Share timing, venue, or references"></textarea>
                                 </p>
                             </div>
+
+                            <!-- Submit -->
                             <div class="form-group full">
                                 <p>
                                     <button type="submit" class="submit-btn">
                                         <i aria-hidden="true">+</i>
-                                        <span>Get quote</span>
+                                        <span>Send Booking Request</span>
                                     </button>
                                 </p>
                             </div>
@@ -449,37 +500,60 @@
             </div>
         </section>
 
-        <!-- GUARANTEE -->
+        <!-- ============================================================
+GUARANTEE - WITH 6 POINTS
+============================================================ -->
         <section class="guarantee-section" aria-label="Our guarantee">
             <div class="guarantee-heading">
-                <h2>Every video comes with our "peace of mind guarantee"</h2>
+                <h2>Every Celebration Deserves a Cinematic Story.</h2>
             </div>
             <div class="guarantee-grid">
+                <!-- Left Column - Points 1, 2, 3 -->
                 <div class="guarantee-points">
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">01</div>
-                        <h5>You'll never pay extra</h5>
-                        <p>Integer sed pulvinar justo. Nulla facilisis nisi nec velit hendrerit, non molestie ante efficitur. Duis at lectus tincidunt.</p>
+                        <h5>Professional Content</h5>
+                        <p>High-quality cinematic reels captured with precision and creativity.</p>
                     </div>
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">02</div>
-                        <h5>Always know what's next</h5>
-                        <p>Integer sed pulvinar justo. Nulla facilisis nisi nec velit hendrerit, non molestie ante efficitur. Duis at lectus tincidunt.</p>
+                        <h5>Fast Delivery</h5>
+                        <p>Receive your reels quickly, so you can share your moments while they're still fresh.</p>
                     </div>
-                </div>
-                <div class="guarantee-image">
-                    <img loading="lazy" decoding="async" width="1024" height="1024" src="images/dream-1.jpg" srcset="images/dream-1.jpg 1024w, images/dream-1-300x300.jpg 300w, images/dream-1-150x150.jpg 150w, images/dream-1-768x768.jpg 768w, images/dream-1-600x600.jpg 600w, images/dream-1-100x100.jpg 100w" sizes="(max-width: 1024px) 100vw, 1024px" alt="dream">
-                </div>
-                <div class="guarantee-points">
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">03</div>
-                        <h5>You'll love the result</h5>
-                        <p>Integer sed pulvinar justo. Nulla facilisis nisi nec velit hendrerit, non molestie ante efficitur. Duis at lectus tincidunt.</p>
+                        <h5>Story-Driven Approach</h5>
+                        <p>We don't just record events—we capture emotions, memories, and experiences.</p>
                     </div>
+                </div>
+
+                <!-- Center - Image -->
+                <div class="guarantee-image-wrapper">
+                    <div class="guarantee-image">
+                        <img loading="lazy" decoding="async" width="1024" height="1024"
+                            src="images/dream-1.jpg"
+                            srcset="images/dream-1.jpg 1024w, images/dream-1-300x300.jpg 300w, images/dream-1-150x150.jpg 150w, images/dream-1-768x768.jpg 768w, images/dream-1-600x600.jpg 600w, images/dream-1-100x100.jpg 100w"
+                            sizes="(max-width: 1024px) 100vw, 1024px"
+                            alt="dream">
+                    </div>
+                </div>
+
+                <!-- Right Column - Points 4, 5, 6 -->
+                <div class="guarantee-points">
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">04</div>
-                        <h5>You'll enjoy the process</h5>
-                        <p>Integer sed pulvinar justo. Nulla facilisis nisi nec velit hendrerit, non molestie ante efficitur. Duis at lectus tincidunt.</p>
+                        <h5>Social Media Ready</h5>
+                        <p>Vertical, engaging content optimized for Instagram, Facebook, and more.</p>
+                    </div>
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-num">05</div>
+                        <h5>Affordable Packages</h5>
+                        <p>Premium-quality event content with packages starting at just ₹1,699.</p>
+                    </div>
+                    <div class="guarantee-point">
+                        <div class="guarantee-point-num">06</div>
+                        <h5>Hassle-Free Experience</h5>
+                        <p>From booking to final delivery, we make the entire process simple and seamless.</p>
                     </div>
                 </div>
             </div>
@@ -490,53 +564,63 @@
             <div class="faq-container">
                 <div class="faq-left">
                     <h2>FAQs</h2>
-                    <p>Get quick answers about working with us and our approach to digital solutions.</p>
-                    <a href="#contact">ASK A QUESTION <span>↗</span></a>
+                    <p>Got Questions?
+                        We've Got Answers.</p>
+                    <a href="#contact">Have questions?<span>↗</span></a>
                 </div>
                 <div class="faq-right">
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What types of video content do you produce?</span>
+                            <span>What is Moments by MQlus?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>We produce commercials, corporate videos, product videos, social media content, animations and event films tailored to your brand and audience.</p>
+                            <p>Moments by MQlus is a professional event content creation service that captures weddings, birthdays, corporate events, car deliveries, store launches, and special celebrations through cinematic reels and social-ready videos.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>What's included in your video packages?</span>
+                            <span>What types of events do you cover?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Our packages can include creative direction, scripting, production, filming, editing, color grading, sound design and final delivery.</p>
+                            <p>We cover weddings, birthdays, engagements, anniversaries, corporate events, store launches, café shoots, salon shoots, car deliveries, family gatherings, and much more. If it's worth celebrating, we'll capture it.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>How Many Revisions Can I Make?</span>
+                            <span>How soon will I receive my reels?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>The number of revisions depends on your selected package. We work closely with you to make sure the final result matches your vision.</p>
+                            <p>We offer fast turnaround with selected reels delivered during or shortly after your event. Final edited content is delivered based on your chosen package.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>How long does a video project take?</span>
+                            <span>How do I book a shoot?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Most projects take between two and six weeks, depending on the scope, production requirements and number of deliverables.</p>
+                            <p>Simply share your event date, location, and requirements with us. We'll recommend the best package, confirm your booking, and take care of the rest.</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            <span>Can you help with scripting and creative direction?</span>
+                            <span>What are your packages?</span>
                             <span class="faq-icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes. Our creative team can help with concept development, scripting, storyboarding and creative direction from start to finish.</p>
+                            <p>Our packages start at ₹1,999, with options available for small celebrations, full-day events, weddings, and customized requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What are your packages?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our packages start at ₹1,999, with options available for small celebrations, full-day events, weddings, and customized requirements.</p>
                         </div>
                     </div>
                 </div>
@@ -548,11 +632,11 @@
             <div class="testimonials-container">
                 <div class="testimonials-top">
                     <div class="testimonials-heading">
-                        <span class="testimonials-label">USER FEEDBACKS</span>
-                        <h2>Real feedback from our happy clients. Let's build your brand—together.</h2>
+                        <span class="testimonials-label">Client review</span>
+                        <h2>What our users say.</h2>
                         <a href="/contact/" class="quote-btn">
                             <span class="icon">+</span>
-                            <span>GET QUOTE</span>
+                            <span>Real moments, fast delivery, and reviews from hosts who needed content without the chaos.</span>
                         </a>
                     </div>
                     <div class="trusted-box">
@@ -681,13 +765,15 @@
                 <div class="footer-col">
                     <p class="footer-label">Get in touch</p>
                     <div class="footer-contact-list">
-                        <a href="mailto:hello@pixverse.com">hello@pixverse.com</a>
-                        <a href="tel:12557895353">+1 255 789 5353</a>
+                        <a href="mailto:hello@pixverse.com">connect@mqlus.in</a>
+                        <a href="tel:12557895353">+91 9183490098</a>
                     </div>
-                    <p class="footer-label">Head Office</p>
+                    <p class="footer-label">
+                    <Address></Address>
+                    </p>
                     <div class="footer-address">
-                        <p>PixVerse Studio, Inc.</p>
-                        <p>123 Creative Lane, Artistry City, CA 90210 United States</p>
+                        <p>Mqlus</p>
+                        <p>73, Scheme 103, Kesar Bag, Indore, Madhya Pradesh 452009</p>
                     </div>
                 </div>
             </div>
@@ -701,8 +787,7 @@
                     </a>
                 </div>
                 <div class="footer-bottom-text">
-                    <p>Designed and developed by JWSThemes.</p>
-                    <p>©2026. All rights reserved by PixVerse Studio</p>
+                    <p>©2026 Moments by MQlus. All rights reserved.</p>
                 </div>
             </div>
         </div>

@@ -75,10 +75,10 @@
             <div class="hero-heading-wrap">
                 <span class="hero-subtitle">A Venture By MQlus</span>
                 <h1 class="hero-title">
-                    Your moment <br>
+                    Your Moment <br>
                     <span class="highlight">
 
-                        <span class="highlight-text"> deserves</span>
+                        <span class="highlight-text"> Deserves</span>
                         <span class="highlight-underline"></span>
                     </span>
                     Moments

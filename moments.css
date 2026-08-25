@@ -411,7 +411,7 @@ h6 {
     position: relative;
     padding: 10px 20px;
     margin: 0px 5px;
-    transform: rotate(-0.4deg);
+    transform: rotate(-5deg);
 }
 
 .highlight-text {
@@ -420,20 +420,20 @@ h6 {
     color: #ffffff;
     display: inline-block;
     padding: 4px 12px;
-    transform: rotate(-5.4deg);
-    line-height: 1.2;
+    transform: rotate(-4.4deg);
+    line-height: 1.5;
     font-weight: 600;
 }
 
 .hero-title .highlight-underline {
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 50%;
     width: 6.2em;
     aspect-ratio: 280 / 122;
     transform: translate(-50%, -50%);
     z-index: 0;
-    background: url('images/important-text.png') center center / 90% 90% no-repeat;
+    background: url('images/c.png') center center / 90% 70% no-repeat;
     pointer-events: none;
     user-select: none;
 }
@@ -472,6 +472,10 @@ h6 {
         justify-content: center;
         flex-wrap: wrap;
     }
+    .highlight {
+    
+   margin-bottom: 30px;
+}
 }
 
 /* ============================================================
@@ -1383,8 +1387,7 @@ CONTACT - UPDATED
     width: 100%;
     min-height: 720px;
     margin-top: 80px;
-    background: linear-gradient(90deg, rgba(8, 6, 20, 0.88), rgba(8, 6, 20, 0.72)),
-        url("images/contact-bg.jpg") center center / cover no-repeat;
+    background-color: black;
     overflow: hidden;
 }
 
@@ -1416,7 +1419,7 @@ CONTACT - UPDATED
     padding: 10px 25px;
     margin-bottom: 18px;
     border-radius: 40px;
-    background: #dcd7ff;
+    background:  #00d8e4;
     color: #11101b;
     font-size: 11px;
     font-weight: 700;

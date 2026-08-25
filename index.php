@@ -89,7 +89,7 @@
                     </p>
                     <div class="hero-decorations">
                         <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="our work">
-                        <img loading="lazy" decoding="async" width="147" height="89" src="images/Arrowjws.svg" alt="arrow to work section">
+                        <img loading="lazy" decoding="async" width="147" height="89" src="images/d.png" alt="arrow to work section">
                     </div>
                 </div>
             </div>
@@ -402,7 +402,7 @@ CONTACT - UPDATED WITH NEW FIELDS
                         <div class="contact-info-box">
                             <h4>📞 Phone</h4>
                             <p><a href="tel:+9183490098">+91 83490098</a></p>
-                            <p style="font-size:13px; color:rgba(255,255,255,0.5);">Quick confirmation on WhatsApp</p>
+                            <p style="font-size:13px; color:rgb(255, 255, 255);">Quick confirmation on WhatsApp</p>
                         </div>
                         <div class="contact-info-box">
                             <h4>📍 Location</h4>

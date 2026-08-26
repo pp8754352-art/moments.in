@@ -372,6 +372,23 @@ h6 {
     }
 }
 
+.hero-decorations .draw {
+    clip-path: inset(0 0 100% 0);
+    animation: drawArrow 1s linear infinite;
+}
+
+@keyframes drawArrow {
+    0% {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+
+
 /* ============================================================
            HERO
            ============================================================ */
@@ -433,7 +450,7 @@ h6 {
     aspect-ratio: 280 / 122;
     transform: translate(-50%, -50%);
     z-index: 0;
-    background: url('images/c.png') center center / 90% 70% no-repeat;
+    background: url('../images/c.png') center center / 90% 70% no-repeat;
     pointer-events: none;
     user-select: none;
 }

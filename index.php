@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css?family=DM%20Sans:700,600,500,400&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="moments.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="assest/moments.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -89,7 +89,7 @@
                     </p>
                     <div class="hero-decorations">
                         <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="our work">
-                        <img loading="lazy" decoding="async" width="147" height="89" src="images/d.png" alt="arrow to work section">
+                        <img class ="draw" loading="lazy" decoding="async" width="147" height="89" src="images/d.png" alt="arrow to work section">
                     </div>
                 </div>
             </div>
@@ -794,7 +794,7 @@ GUARANTEE - WITH 6 POINTS
     </footer>
 
 
-    <script src="moments.js"></script>
+    <script src="assest/moments.js"></script>
 
 </body>
 

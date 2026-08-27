@@ -312,6 +312,7 @@ SERVICE & PRICING - ALL EXPANDED
                             <span class="pricing-item-cat">Fully Customizable</span>
                         </div>
                     </div>
+                    <div class="pricing-item-price">Custom</div>
                 </div>
 
                 <!-- Quick Add-On (Hidden by default, shown in Quick Add mode) -->

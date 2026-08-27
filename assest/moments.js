@@ -23,6 +23,68 @@
         });
     }
 
+
+    /* ============================================================
+PRICING TOGGLE - PROJECT BASED / QUICK ADD
+============================================================ */
+    document.addEventListener('DOMContentLoaded', function () {
+        var toggleLabels = document.querySelectorAll('.toggle-label');
+        var pricingList = document.getElementById('pricingList');
+        var projectItems = document.querySelectorAll('.pricing-item.project-item');
+        var quickAddItems = document.querySelectorAll('.pricing-item.quickadd-item');
+
+        function showProjectMode() {
+            // Show project items
+            projectItems.forEach(function (item) {
+                item.style.display = 'grid';
+            });
+            // Hide quick add items
+            quickAddItems.forEach(function (item) {
+                item.style.display = 'none';
+            });
+            // Update toggle
+            toggleLabels.forEach(function (label) {
+                label.classList.remove('active');
+                if (label.getAttribute('data-mode') === 'project') {
+                    label.classList.add('active');
+                }
+            });
+        }
+
+        function showQuickAddMode() {
+            // Hide project items
+            projectItems.forEach(function (item) {
+                item.style.display = 'none';
+            });
+            // Show quick add items
+            quickAddItems.forEach(function (item) {
+                item.style.display = 'grid';
+            });
+            // Update toggle
+            toggleLabels.forEach(function (label) {
+                label.classList.remove('active');
+                if (label.getAttribute('data-mode') === 'quickadd') {
+                    label.classList.add('active');
+                }
+            });
+        }
+
+        // Add click handlers
+        toggleLabels.forEach(function (label) {
+            label.addEventListener('click', function () {
+                var mode = this.getAttribute('data-mode');
+                if (mode === 'project') {
+                    showProjectMode();
+                } else if (mode === 'quickadd') {
+                    showQuickAddMode();
+                }
+            });
+        });
+
+        // Default: Show Project mode
+        showProjectMode();
+    });
+
     /* -----------------------------------------------------
        STICKY HEADER
     ----------------------------------------------------- */
@@ -86,10 +148,10 @@
 
         counters.forEach(function (el) { counterObserver.observe(el); });
     }
-
     /* -----------------------------------------------------
-       CURVED SLIDER (3D drag carousel)
-    ----------------------------------------------------- */
+           CURVED SLIDER (3D drag carousel) - VIDEO VERSION
+           (Videos continue playing without pause - Optimized)
+        ----------------------------------------------------- */
     (function () {
         var track = document.getElementById('sliderTrack');
         if (!track) return;
@@ -99,19 +161,32 @@
         var SPEED = 0.12;
         var THRESHOLD = 50;
 
-        var imgs = [
-            'https://picsum.photos/seed/a1/600/800',
-            'https://picsum.photos/seed/b2/600/800',
-            'https://picsum.photos/seed/c3/600/800',
-            'https://picsum.photos/seed/d4/600/800',
-            'https://picsum.photos/seed/e5/600/800',
-            'https://picsum.photos/seed/f6/600/800',
-            'https://picsum.photos/seed/g7/600/800',
-            'https://picsum.photos/seed/h8/600/800',
-            'https://picsum.photos/seed/i9/600/800',
-            'https://picsum.photos/seed/j10/600/800',
-            'https://picsum.photos/seed/k11/600/800',
-            'https://picsum.photos/seed/l12/600/800'
+        var videos = [
+            'vedios/a.mp4',
+            'vedios/b.mp4',
+            'vedios/c.mp4',
+            'vedios/d.mp4',
+            'vedios/e.mp4',
+            'vedios/f.mp4',
+            'vedios/g.mp4',
+            'vedios/h.mp4',
+            'vedios/i.mp4',
+            'vedios/j.mp4',
+            'vedios/k.mp4',
+            'vedios/l.mp4',
+            'vedios/m.mp4',
+            'vedios/n.mp4',
+            'vedios/o.mp4',
+            'vedios/p.mp4',
+            'vedios/q.mp4',
+            'vedios/u.mp4',
+            'vedios/r.mp4',
+            'vedios/s.mp4',
+            'vedios/t.mp4',
+            'vedios/u.mp4',
+            'vedios/v.mp4',
+            'vedios/w.mp4',
+            'vedios/x.mp4'
         ];
 
         var cards = [];
@@ -119,6 +194,7 @@
         var isDragging = false;
         var dragStartX = 0;
         var dragStartRot = 0;
+        var animationId = null;
 
         for (var i = 0; i < NUM; i++) {
             var card = document.createElement('div');
@@ -127,14 +203,48 @@
             card.style.transform = 'rotateY(' + angle + 'deg) translateZ(' + RADIUS + 'px)';
             card._baseAngle = angle;
 
-            var img = document.createElement('img');
-            img.src = imgs[i % imgs.length];
-            img.alt = 'slide';
-            img.loading = 'lazy';
-            card.appendChild(img);
+            var video = document.createElement('video');
+            video.src = videos[i % videos.length];
+            video.alt = 'slide video';
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+
+            card.appendChild(video);
             track.appendChild(card);
             cards.push(card);
         }
+
+        // Preload and play all videos
+        function playAllVideos() {
+            cards.forEach(function (c) {
+                var video = c.querySelector('video');
+                if (video) {
+                    video.play().catch(function (e) {
+                        // Will try again on interaction
+                    });
+                }
+            });
+        }
+
+        // Start playing after metadata loads
+        var loadedCount = 0;
+        cards.forEach(function (c, index) {
+            var video = c.querySelector('video');
+            video.addEventListener('loadedmetadata', function () {
+                loadedCount++;
+                if (loadedCount === cards.length) {
+                    playAllVideos();
+                }
+            });
+            // Fallback: try to play anyway
+            setTimeout(function () {
+                video.play().catch(function (e) { });
+            }, 1000 * (index + 1));
+        });
 
         function update() {
             if (!isDragging) {
@@ -147,10 +257,19 @@
                 var eff = (c._baseAngle - rotation) % 360;
                 if (eff > 180) eff -= 360;
                 if (eff < -180) eff += 360;
-                c.classList.toggle('is-active', Math.abs(eff) < THRESHOLD);
+                var isActive = Math.abs(eff) < THRESHOLD;
+                c.classList.toggle('is-active', isActive);
+
+                // Ensure videos keep playing
+                var video = c.querySelector('video');
+                if (video) {
+                    if (video.paused && !video.ended) {
+                        video.play().catch(function (e) { });
+                    }
+                }
             });
 
-            requestAnimationFrame(update);
+            animationId = requestAnimationFrame(update);
         }
         update();
 
@@ -159,6 +278,14 @@
             dragStartX = clientX;
             dragStartRot = rotation;
             track.style.cursor = 'grabbing';
+
+            // Ensure all videos keep playing during drag
+            cards.forEach(function (c) {
+                var video = c.querySelector('video');
+                if (video && video.paused) {
+                    video.play().catch(function (e) { });
+                }
+            });
         }
 
         function onMove(clientX) {
@@ -167,17 +294,42 @@
             rotation = dragStartRot + delta;
             if (rotation > 360) rotation -= 360;
             if (rotation < 0) rotation += 360;
+
+            // Keep videos playing during drag
+            cards.forEach(function (c) {
+                var video = c.querySelector('video');
+                if (video && video.paused) {
+                    video.play().catch(function (e) { });
+                }
+            });
         }
 
         function onEnd() {
             isDragging = false;
             track.style.cursor = 'grab';
+
+            // Ensure videos resume after drag
+            setTimeout(function () {
+                cards.forEach(function (c) {
+                    var video = c.querySelector('video');
+                    if (video && video.paused) {
+                        video.play().catch(function (e) { });
+                    }
+                });
+            }, 100);
         }
 
-        track.addEventListener('mousedown', function (e) { onStart(e.clientX); });
-        window.addEventListener('mousemove', function (e) { onMove(e.clientX); });
+        // Mouse events
+        track.addEventListener('mousedown', function (e) {
+            e.preventDefault();
+            onStart(e.clientX);
+        });
+        window.addEventListener('mousemove', function (e) {
+            onMove(e.clientX);
+        });
         window.addEventListener('mouseup', onEnd);
 
+        // Touch events
         track.addEventListener('touchstart', function (e) {
             var t = e.touches[0];
             if (t) onStart(t.clientX);
@@ -186,37 +338,87 @@
         track.addEventListener('touchmove', function (e) {
             var t = e.touches[0];
             if (t) onMove(t.clientX);
-        }, { passive: true });
+            // Prevent page scroll on touch devices
+            e.preventDefault();
+        }, { passive: false });
 
         track.addEventListener('touchend', onEnd, { passive: true });
+        track.addEventListener('touchcancel', onEnd, { passive: true });
 
+        // Keyboard controls
         window.addEventListener('keydown', function (e) {
             if (e.key === 'ArrowLeft') {
                 rotation -= 6;
                 if (rotation < 0) rotation += 360;
                 e.preventDefault();
+                // Keep videos playing
+                cards.forEach(function (c) {
+                    var video = c.querySelector('video');
+                    if (video && video.paused) {
+                        video.play().catch(function (e) { });
+                    }
+                });
             }
             if (e.key === 'ArrowRight') {
                 rotation += 6;
                 if (rotation > 360) rotation -= 360;
                 e.preventDefault();
+                // Keep videos playing
+                cards.forEach(function (c) {
+                    var video = c.querySelector('video');
+                    if (video && video.paused) {
+                        video.play().catch(function (e) { });
+                    }
+                });
             }
         });
+
+        // Handle visibility change - resume videos when tab is visible
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) {
+                playAllVideos();
+            }
+        });
+
+        // Click anywhere on page to resume videos
+        document.addEventListener('click', function () {
+            playAllVideos();
+        }, { once: false });
+
+        // Touch anywhere on page to resume videos
+        document.addEventListener('touchstart', function () {
+            playAllVideos();
+        }, { once: false });
+
+        // Resume videos on scroll
+        window.addEventListener('scroll', function () {
+            cards.forEach(function (c) {
+                var video = c.querySelector('video');
+                if (video && video.paused) {
+                    video.play().catch(function (e) { });
+                }
+            });
+        }, { passive: true });
+
+        console.log('Video slider initialized with ' + NUM + ' cards and ' + videos.length + ' videos');
     })();
 
-var contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (!contactForm.checkValidity()) {
-            contactForm.reportValidity();
-            return;
-        }
-        // TODO: replace with a real fetch() call to your backend
-        alert('Thanks! Your message has been received.');
-        contactForm.reset();
-    });
-}
+
+
+
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+            // TODO: replace with a real fetch() call to your backend
+            alert('Thanks! Your message has been received.');
+            contactForm.reset();
+        });
+    }
 
     /* -----------------------------------------------------
        NEWSLETTER FORM

@@ -48,7 +48,7 @@ h6 {
     font-family: 'Apfel Grotezk', 'DM Sans', sans-serif;
     font-weight: 500;
     color: #050414;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.060em;
 }
 
 /* ============================================================
@@ -417,9 +417,9 @@ h6 {
 }
 
 .hero-title {
-    font-size: 62px;
-    line-height: 1;
-    font-weight: 600;
+    font-size: 64px;
+    line-height: 0.8;
+    font-weight: 900;
     color: #050414;
 }
 
@@ -428,7 +428,12 @@ h6 {
     position: relative;
     padding: 10px 20px;
     margin: 0px 5px;
-    transform: rotate(-5deg);
+    
+}
+
+.a{
+
+    margin-right: -70px;
 }
 
 .highlight-text {
@@ -436,7 +441,9 @@ h6 {
     z-index: 5;
     color: #ffffff;
     display: inline-block;
-    padding: 4px 12px;
+    padding: 0px 10px 0px 12px;
+    padding-top: 7px;
+
     transform: rotate(-4.4deg);
     line-height: 1.5;
     font-weight: 600;
@@ -450,7 +457,7 @@ h6 {
     aspect-ratio: 280 / 122;
     transform: translate(-50%, -50%);
     z-index: 0;
-    background: url('../images/c.png') center center / 90% 70% no-repeat;
+    background: url('../images/c.png') center center / 80% 70% no-repeat;
     pointer-events: none;
     user-select: none;
 }
@@ -494,9 +501,8 @@ h6 {
    margin-bottom: 30px;
 }
 }
-
 /* ============================================================
-           CURVED SLIDER
+           CURVED SLIDER - VIDEO VERSION
            ============================================================ */
 .slider-section {
     position: relative;
@@ -550,13 +556,24 @@ h6 {
     will-change: transform;
 }
 
-.curved-slide img {
+/* Video styles */
+.curved-slide video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     pointer-events: none;
     user-select: none;
+}
+
+/* Active state with subtle glow */
+.curved-slide.is-active {
+    z-index: 1;
+}
+
+/* Fallback for videos that don't load */
+.curved-slide video::poster {
+    object-fit: cover;
 }
 
 .hero-actions-wrap {
@@ -606,12 +623,14 @@ h6 {
     margin-top: 20px;
 }
 
+/* Mobile Responsive */
 @media (max-width: 1024px) {
     .curved-slide {
         width: 240px;
         height: 380px;
         margin-left: -120px;
         margin-top: -190px;
+        border-radius: 16px;
     }
 
     .curved-container {
@@ -623,24 +642,23 @@ h6 {
     .curved-slide {
         width: 470px;
         height: 770px;
-        margin-left: -85px;
-        margin-top: -135px;
-        border-radius: 16px;
+        margin-left: -15px;
+        margin-top: -15px;
+        border-radius: 12px;
     }
 
     .curved-container {
-        height: 770px;
+        height: 670px;
     }
 
     .hero-actions-wrap {
-        margin-top: -80px;
+        margin-top: -15px;
     }
 
     .hero-heading-wrap {
         margin-bottom: -340px;
     }
 }
-
 /* ============================================================
            STATS
            ============================================================ */
@@ -1171,14 +1189,17 @@ SERVICE & PRICING - ALL EXPANDED
         padding: 5px 12px;
     }
 }
+
+
 /* ============================================================
-           PROCESS
-           ============================================================ */
+PROCESS - BLACK BACKGROUND
+============================================================ */
 .process-section {
     width: 100%;
-    background: #ffffff;
+    background: #000000;
     overflow: hidden;
-    margin-top: 90px;
+    padding: 90px 0 80px;
+    margin-top: 0;
 }
 
 .process-container {
@@ -1199,18 +1220,18 @@ SERVICE & PRICING - ALL EXPANDED
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: #050414;
+    color: #00d8e4;
 }
 
 .process-heading h2 {
-     padding-top: 4px ;
-      padding-left: -7px ;
+    padding-top: 4px;
+    padding-left: -7px;
     font-size: 34px;
     line-height: 1;
     font-weight: 600;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: #050414;
+    color: #ffffff;
 }
 
 .process-grid {
@@ -1237,7 +1258,7 @@ SERVICE & PRICING - ALL EXPANDED
     line-height: 1.15;
     font-weight: 500;
     letter-spacing: -1.3px;
-    color: #050414;
+    color: #ffffff;
 }
 
 .process-title-row span {
@@ -1254,7 +1275,7 @@ SERVICE & PRICING - ALL EXPANDED
     font-size: 19px;
     line-height: 1.58;
     font-weight: 400;
-    color: #777681;
+    color: #999999;
 }
 
 .process-icon {
@@ -1264,7 +1285,7 @@ SERVICE & PRICING - ALL EXPANDED
     align-items: center;
     justify-content: center;
     margin-top: 25px;
-    background: #f7f6f4;
+    background: #1a1a1a;
     border-radius: 5px;
     transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -1273,11 +1294,12 @@ SERVICE & PRICING - ALL EXPANDED
     width: 32px;
     height: 32px;
     object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .process-item:hover .process-icon {
     transform: translateY(-5px);
-    background: #f1f0ee;
+    background: #2a2a2a;
 }
 
 @media (max-width: 1400px) {
@@ -1324,6 +1346,7 @@ SERVICE & PRICING - ALL EXPANDED
     .process-heading h2 {
         font-size: 48px;
         letter-spacing: -2px;
+        color: #ffffff;
     }
 
     .process-grid {
@@ -1334,18 +1357,19 @@ SERVICE & PRICING - ALL EXPANDED
 
     .process-title-row h3 {
         font-size: 25px;
+        color: #ffffff;
     }
 
     .process-item p {
         max-width: 100%;
         font-size: 17px;
+        color: #999999;
     }
 }
 
 @media (max-width: 600px) {
     .process-section {
         padding: 65px 0 75px;
-        margin-top: -60px;
     }
 
     .process-container {
@@ -1359,12 +1383,14 @@ SERVICE & PRICING - ALL EXPANDED
     .process-label {
         font-size: 11px;
         letter-spacing: 1.2px;
+        color: #00d8e4;
     }
 
     .process-heading h2 {
         font-size: 38px;
         line-height: 1.1;
         letter-spacing: -1.7px;
+        color: #ffffff;
     }
 
     .process-grid {
@@ -1378,6 +1404,7 @@ SERVICE & PRICING - ALL EXPANDED
 
     .process-title-row h3 {
         font-size: 25px;
+        color: #ffffff;
     }
 
     .process-title-row span {
@@ -1387,25 +1414,28 @@ SERVICE & PRICING - ALL EXPANDED
     .process-item p {
         font-size: 16px;
         line-height: 1.55;
+        color: #999999;
     }
 
     .process-icon {
         width: 62px;
         height: 62px;
         margin-top: 20px;
+        background: #1a1a1a;
     }
 }
 
 /* ============================================================
-CONTACT - UPDATED
+CONTACT - UPDATED (BLACK BACKGROUND)
 ============================================================ */
 .contact-section {
     position: relative;
     width: 100%;
     min-height: 720px;
-    margin-top: 80px;
-    background-color: black;
+    background-color: #000000;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .contact-layout {
@@ -1436,7 +1466,7 @@ CONTACT - UPDATED
     padding: 10px 25px;
     margin-bottom: 18px;
     border-radius: 40px;
-    background:  #00d8e4;
+    background: #00d8e4;
     color: #11101b;
     font-size: 11px;
     font-weight: 700;
@@ -1447,7 +1477,7 @@ CONTACT - UPDATED
 .contact-left h2 {
     max-width: 650px;
     margin: 0;
-    color: #fff;
+    color: #ffffff;
     font-size: 48px;
     line-height: 1.08;
     font-weight: 500;
@@ -1466,7 +1496,7 @@ CONTACT - UPDATED
 
 .contact-info-box h4 {
     margin: 0 0 6px;
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
 }
@@ -1493,7 +1523,7 @@ CONTACT - UPDATED
     width: 100%;
     max-width: 690px;
     padding: 38px 40px 42px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 20px;
     color: #111;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
@@ -1567,7 +1597,7 @@ CONTACT - UPDATED
 .contact-right textarea:focus {
     border-color: #00d8e4;
     box-shadow: 0 0 0 3px rgba(0, 216, 228, 0.1);
-    background: #fff;
+    background: #ffffff;
 }
 
 .contact-right input::placeholder {
@@ -1619,7 +1649,7 @@ CONTACT - UPDATED
     border: 0;
     border-radius: 30px;
     background: #05030f;
-    color: #fff;
+    color: #ffffff;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -1642,7 +1672,7 @@ CONTACT - UPDATED
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.15);
-    color: #fff;
+    color: #ffffff;
     font-size: 20px;
     transition: transform 0.3s ease;
 }
@@ -1661,6 +1691,7 @@ CONTACT - UPDATED
     
     .contact-left h2 {
         font-size: 38px;
+        color: #ffffff;
     }
     
     .contact-right {
@@ -1676,6 +1707,7 @@ CONTACT - UPDATED
     .contact-layout {
         grid-template-columns: 1fr;
         gap: 40px;
+        min-height: auto;
     }
     
     .contact-left {
@@ -1697,7 +1729,6 @@ CONTACT - UPDATED
     .contact-section {
         min-height: auto;
         background-position: center;
-        margin-top: 50px;
     }
     
     .contact-layout {
@@ -1715,6 +1746,7 @@ CONTACT - UPDATED
         font-size: 34px;
         line-height: 1.15;
         letter-spacing: -1px;
+        color: #ffffff;
     }
     
     .contact-info {
@@ -1759,6 +1791,7 @@ CONTACT - UPDATED
     
     .contact-left h2 {
         font-size: 28px;
+        color: #ffffff;
     }
     
     .contact-right {
@@ -1805,12 +1838,24 @@ GUARANTEE - WITH 6 POINTS
     gap: 45px;
 }
 
-.guarantee-points:first-child {
-    padding-right: 20px;
+/* Left points - align text to right */
+.guarantee-points.left-points {
+    text-align: right;
+    align-items: flex-end;
 }
 
-.guarantee-points:last-child {
-    padding-left: 20px;
+.guarantee-points.left-points .guarantee-point {
+    max-width: 100%;
+}
+
+/* Right points - align text to left */
+.guarantee-points.right-points {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.guarantee-points.right-points .guarantee-point {
+    max-width: 100%;
 }
 
 .guarantee-point-num {
@@ -1843,6 +1888,18 @@ GUARANTEE - WITH 6 POINTS
     font-size: 15px;
     line-height: 1.6;
     color: #777681;
+}
+
+/* Left points text alignment */
+.guarantee-points.left-points .guarantee-point h5,
+.guarantee-points.left-points .guarantee-point p {
+    text-align: right;
+}
+
+/* Right points text alignment */
+.guarantee-points.right-points .guarantee-point h5,
+.guarantee-points.right-points .guarantee-point p {
+    text-align: left;
 }
 
 /* Image Wrapper */
@@ -1880,13 +1937,9 @@ GUARANTEE - WITH 6 POINTS
     left: -15px;
     right: -15px;
     bottom: -15px;
-    
     border-radius: 260px 260px 260px 260px;
-   
     pointer-events: none;
 }
-
-
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -1915,12 +1968,25 @@ GUARANTEE - WITH 6 POINTS
         height: 420px;
     }
     
-    .guarantee-points:first-child {
-        padding-right: 0;
+    /* Reset text alignment for mobile */
+    .guarantee-points.left-points {
+        text-align: left;
+        align-items: flex-start;
     }
     
-    .guarantee-points:last-child {
-        padding-left: 0;
+    .guarantee-points.left-points .guarantee-point h5,
+    .guarantee-points.left-points .guarantee-point p {
+        text-align: left;
+    }
+    
+    .guarantee-points.right-points {
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .guarantee-points.right-points .guarantee-point h5,
+    .guarantee-points.right-points .guarantee-point p {
+        text-align: left;
     }
     
     .guarantee-points {
@@ -2165,13 +2231,14 @@ GUARANTEE - WITH 6 POINTS
 }
 
 /* ============================================================
-           TESTIMONIALS
-           ============================================================ */
+TESTIMONIALS - INFINITE SCROLL RIGHT TO LEFT
+============================================================ */
 .testimonials-section {
     width: 100%;
     background: #ffffff;
     padding: 80px 0 70px;
     overflow: hidden;
+    position: relative;
 }
 
 .testimonials-container {
@@ -2261,77 +2328,120 @@ GUARANTEE - WITH 6 POINTS
 
 .trusted-stars {
     color: #00d8e4;
-    ;
     font-size: 16px;
     letter-spacing: 1px;
 }
 
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+/* ============================================================
+SCROLL WRAPPER - RIGHT TO LEFT
+============================================================ */
+.scroll-wrapper {
+    width: 100%;
+   
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.testimonial-card {
-    min-height: 325px;
+.scroll-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollRightToLeft 30s linear infinite;
+    width: max-content;
+    padding: 5px 0;
+}
+
+.scroll-track:hover {
+    animation-play-state: paused;
+}
+
+/* Review Cards */
+.review-card {
+    min-width: 320px;
+    max-width: 320px;
+    min-height: 280px;
     background: #f8f7f5;
     border-radius: 25px;
-    padding: 35px 28px 30px;
+    padding: 30px 25px 25px;
     display: flex;
     flex-direction: column;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    flex-shrink: 0;
+    text-align: left;
 }
 
-.testimonial-card:hover {
+.review-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 50px rgba(5, 4, 20, 0.08);
 }
 
-.testimonial-rating {
+.review-rating {
     color: #00d8e4;
-    ;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
+    text-align: left;
 }
 
-.testimonial-text {
+.review-text {
     margin: 0;
-    font-size: 18px;
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.6;
     color: #050414;
     flex: 1;
+    text-align: left;
 }
 
-.testimonial-user {
+.review-user {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding-top: 18px;
-    margin-top: 25px;
+    padding-top: 16px;
+    margin-top: 20px;
     border-top: 1px solid #deddda;
+    text-align: left;
 }
 
-.testimonial-user img {
+.review-user img {
     width: 45px;
     height: 45px;
     border-radius: 9px;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
-.testimonial-user h4 {
+.review-user div {
+    text-align: left;
+}
+
+.review-user h4 {
     margin: 0 0 3px;
     font-size: 14px;
     line-height: 1.2;
     color: #050414;
+    text-align: left;
 }
 
-.testimonial-user span {
+.review-user span {
     display: block;
     font-size: 12px;
     color: #777681;
+    text-align: left;
 }
 
+/* Animation - Right to Left */
+@keyframes scrollRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================================
+RATING SECTION
+============================================================ */
 .rating-section {
     display: flex;
     align-items: center;
@@ -2357,6 +2467,7 @@ GUARANTEE - WITH 6 POINTS
     font-size: 27px;
     font-weight: 700;
     color: #050414;
+    flex-shrink: 0;
 }
 
 .rating-logo-red {
@@ -2374,7 +2485,7 @@ GUARANTEE - WITH 6 POINTS
 }
 
 .rating-content {
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .rating-stars {
@@ -2400,6 +2511,9 @@ GUARANTEE - WITH 6 POINTS
     background: #deddda;
 }
 
+/* ============================================================
+RESPONSIVE
+============================================================ */
 @media (max-width: 991px) {
     .testimonials-section {
         padding: 65px 0;
@@ -2429,12 +2543,16 @@ GUARANTEE - WITH 6 POINTS
         margin: 0;
     }
 
-    .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .scroll-track {
+        gap: 25px;
+        animation: scrollRightToLeft 25s linear infinite;
     }
 
-    .testimonial-card:last-child {
-        grid-column: span 2;
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+        min-height: 260px;
+        padding: 25px 20px 22px;
     }
 }
 
@@ -2461,22 +2579,20 @@ GUARANTEE - WITH 6 POINTS
         margin-top: 28px;
     }
 
-    .testimonial-grid {
-        grid-template-columns: 1fr;
+    .scroll-track {
         gap: 18px;
+        animation: scrollRightToLeft 20s linear infinite;
     }
 
-    .testimonial-card {
-        min-height: 290px;
-        padding: 28px 23px;
+    .review-card {
+        min-width: 250px;
+        max-width: 250px;
+        min-height: 240px;
+        padding: 22px 18px 20px;
     }
 
-    .testimonial-card:last-child {
-        grid-column: auto;
-    }
-
-    .testimonial-text {
-        font-size: 16px;
+    .review-text {
+        font-size: 15px;
         line-height: 1.55;
     }
 
@@ -2493,6 +2609,41 @@ GUARANTEE - WITH 6 POINTS
     }
 }
 
+@media (max-width: 480px) {
+    .review-card {
+        min-width: 220px;
+        max-width: 220px;
+        min-height: 220px;
+        padding: 18px 15px 16px;
+    }
+
+    .scroll-track {
+        gap: 15px;
+        animation: scrollRightToLeft 15s linear infinite;
+    }
+
+    .review-text {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .review-user h4 {
+        font-size: 12px;
+    }
+
+    .review-user span {
+        font-size: 10px;
+    }
+
+    .review-user img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .rating-content {
+        min-width: 140px;
+    }
+}
 /* ============================================================
            FOOTER
            ============================================================ */

@@ -75,7 +75,7 @@
             <div class="hero-heading-wrap">
                 <span class="hero-subtitle">A Venture By MQlus</span>
                 <h1 class="hero-title">
-                    Your Moment <br>
+                    Every Emotion, Every Memory<br>
                     <span class="highlight">
 
                         <span class="highlight-text"> Deserves</span>
@@ -88,27 +88,27 @@
                         We capture your moments and transform them into cinematic reels you'll love to watch and share.
                     </p>
                     <div class="hero-decorations">
-                        <img loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="our work">
-                        <img class ="draw" loading="lazy" decoding="async" width="147" height="89" src="images/d.png" alt="arrow to work section">
+                        <img class="a" loading="lazy" decoding="async" width="133" height="57" src="images/f86b1984-badc-4049-8ff5-e74346893a2d.png" alt="our work">
+                        <img class="draw" loading="lazy" decoding="async" width="147" height="89" src="images/d.png" alt="arrow to work section">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CURVED SLIDER -->
         <section class="slider-section" aria-label="Video showcase">
             <div class="curved-container">
                 <div class="curved-stage">
                     <div class="curved-track" id="sliderTrack"></div>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-actions-wrap">
-                <a href="/portfolios/" class="btn">
-                    <span class="btn-text">start project</span>
-                    <span class="btn-icon">↗</span>
-                </a>
-            </div>
+        <div class="hero-actions-wrap">
+            <a href="#contact" class="btn">
+                <span class="btn-text">start project</span>
+                <span class="btn-icon">↗</span>
+            </a>
+        </div>
         </section>
 
         <!-- STATS -->
@@ -123,7 +123,7 @@
                     </div>
 
                     <div class="stat-item">
-                        <span class="stat-number" data-to="4.9" data-suffix="☆">0</span>
+                        <span class="stat-number" data-to="4.9"  data-suffix="★">0</span>
                         <h5>Avg. Rating</h5>
                         <p>Highly rated video production focused on quality, creativity, and client satisfaction.</p>
                     </div>
@@ -145,20 +145,20 @@
         </section>
 
         <!-- DECORATION LINE - RIGHT TO LEFT SCROLL -->
-<div class="marq">
-    <div class="wrapper">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-    </div>
-</div>
+        <div class="marq">
+            <div class="wrapper">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+            </div>
+        </div>
         <!-- GLOBAL BRANDS -->
         <section class="brands-section" aria-label="Trusted brands">
             <div class="brands-inner">
@@ -168,223 +168,181 @@
                 <div class="brands-marquee">
                     <div class="brands-track">
                         <!-- First set -->
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Rumble"></div>
-                        <div class="brand-logo"><img src="images/costa.svg" alt="Costa"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Brand"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Brand"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Brand"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Loopsium"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Rumble"></div>
-                        <div class="brand-logo"><img src="images/rumble.svg" alt="Costa"></div>
+                        <div class="brand-logo"><img src="" alt="Ready to Post"></div>
+                        <div class="brand-logo"><img src="" alt="Storytelling"></div>
+                        <div class="brand-logo"><img src="" alt="Fast Delivery"></div>
+                        <div class="brand-logo"><img src="" alt="Instant Reels"></div>
+                        <div class="brand-logo"><img src="" alt="UGC Videos"></div>
+                        <div class="brand-logo"><img src="" alt="Car Delivery"></div>
+                        <div class="brand-logo"><img src="" alt="Corporate Events"></div>
+                        <div class="brand-logo"><img src="" alt="Content Creation"></div>
                         <!-- Duplicate for seamless loop -->
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
-                        <div class="brand-logo" aria-hidden="true"><img src="images/rumble.svg" alt=""></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Ready to Post"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Storytelling"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Fast Delivery"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Ready to Post"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="UGC Videos"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Ready to Post"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Corporate Events"></div>
+                        <div class="brand-logo" aria-hidden="true"><img src="" alt="Content Creation"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- DECORATION LINE - RIGHT TO LEFT SCROLL -->
-<div class="marq">
-    <div class="wrapper">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-        <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
-    </div>
-</div>
+        <div class="marq">
+            <div class="wrapper">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+                <img decoding="async" src="images/Screenshot 2026-08-24 183055.png" alt="" loading="lazy" aria-hidden="true">
+            </div>
+        </div>
 
 
-      <!-- ============================================================
+        <!-- ============================================================
 SERVICE & PRICING - ALL EXPANDED
 ============================================================ -->
-<section class="pricing-section" id="pricing" aria-label="Services and pricing">
-    <div class="pricing-header">
-        <div class="pricing-title">
-            <h2>
-                Pick how you want it
-                &amp;Captured
-            </h2>
-            <div class="desc">
-                We bring bold visions to life through a fusion of strategy, design, and storytelling.
-                <br>We partner with brands, founders, and creators to shape identities.
-            </div>
-        </div>
-        <div class="pricing-toggle">
-            <div class="toggle-wrapper">
-                <span class="toggle-label active" data-mode="project">Project-based</span>
-                <span class="toggle-label" data-mode="monthly">Monthly</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="pricing-list" id="pricingList">
-        <!-- Quick Reel -->
-        <div class="pricing-item active" data-order="1">
-            <div class="pricing-item-header">
-                <h4 class="pricing-item-title">Quick Reel</h4>
-                <span class="pricing-item-year">Book Quick Reel</span>
-            </div>
-            <div class="pricing-item-body">
-                <div class="pricing-item-desc">
-                    <p>Perfect for small celebrations and personal moments.</p>
-                </div>
-                <div class="pricing-item-cats">
-                    <span class="pricing-item-cat">Up to 2 Hours Coverage</span>
-                    <span class="pricing-item-cat">Professional Videography</span>
-                    <span class="pricing-item-cat">1 Edited Reel (25–40 sec)</span>
-                    <span class="pricing-item-cat">Digital Delivery</span>
-                </div>
-            </div>
-            <div class="pricing-item-price">₹1,699</div>
-        </div>
-
-        <!-- Extended Package -->
-        <div class="pricing-item active" data-order="3">
-            <div class="pricing-item-header">
-                <h4 class="pricing-item-title">Extended Package</h4>
-                <span class="pricing-item-year">Book Extended Package (Most Recommended)</span>
-            </div>
-            <div class="pricing-item-body">
-                <div class="pricing-item-desc">
-                    <p>Ideal for birthdays, family functions, and special occasions.</p>
-                </div>
-                <div class="pricing-item-cats">
-                    <span class="pricing-item-cat">Up to 5 Hours Coverage</span>
-                    <span class="pricing-item-cat">Professional Videography</span>
-                    <span class="pricing-item-cat">3 Cinematic Reels</span>
-                    <span class="pricing-item-cat">Highlight Video</span>
-                    <span class="pricing-item-cat">Digital Delivery</span>
-                </div>
-            </div>
-            <div class="pricing-item-price">₹4,499</div>
-        </div>
-
-        <!-- Quick Add-On -->
-        <div class="pricing-item active" data-order="4">
-            <div class="pricing-item-header">
-                <h4 class="pricing-item-title">Quick Add-On</h4>
-                <span class="pricing-item-year">Add to Booking</span>
-            </div>
-            <div class="pricing-item-body">
-                <div class="pricing-item-desc">
-                    <p>Need a little extra coverage? Extend your shoot to capture those additional moments that matter.</p>
-                </div>
-                <div class="pricing-item-cats">
-                    <span class="pricing-item-cat">Extra 30 Minutes of Coverage</span>
-                    <span class="pricing-item-cat">More Candid Moments</span>
-                    <span class="pricing-item-cat">Additional Cinematic Clips</span>
-                    <span class="pricing-item-cat">Perfect for Last-Minute Extensions</span>
-                </div>
-            </div>
-            <div class="pricing-item-price">₹999</div>
-        </div>
-
-        <!-- Wedding Package -->
-        <div class="pricing-item active" data-order="2">
-            <div class="pricing-item-header">
-                <h4 class="pricing-item-title">Wedding Package</h4>
-                <span class="pricing-item-year">Book Wedding Package</span>
-            </div>
-            <div class="pricing-item-body">
-                <div class="pricing-item-desc">
-                    <p>Every wedding is a once-in-a-lifetime celebration filled with unforgettable moments.</p>
-                </div>
-                <div class="pricing-item-cats">
-                    <span class="pricing-item-cat">Covers the Entire Wedding Celebration</span>
-                    <span class="pricing-item-cat">Shot on iPhone / Samsung Galaxy S25 Ultra</span>
-                    <span class="pricing-item-cat">25 Premium Reels</span>
-                    <span class="pricing-item-cat">Priority Delivery</span>
-                    <span class="pricing-item-cat">Interaction Videos with Complimentary Mobile Portraits</span>
-                    <span class="pricing-item-cat">Cinematic Highlight Film</span>
-                </div>
-            </div>
-            <div class="pricing-item-price">₹69,999</div>
-        </div>
-
-        <!-- Custom Package -->
-        <div class="pricing-item active" data-order="5">
-            <div class="pricing-item-header">
-                <h4 class="pricing-item-title">Custom Package</h4>
-                <span class="pricing-item-year">Request Custom Quote</span>
-            </div>
-            <div class="pricing-item-body">
-                <div class="pricing-item-desc">
-                    <p>Every event is unique. We'll create a package tailored to your requirements.</p>
-                </div>
-                <div class="pricing-item-cats">
-                    <span class="pricing-item-cat">Corporate Events</span>
-                    <span class="pricing-item-cat">Brand Launches</span>
-                    <span class="pricing-item-cat">Pre-Wedding Shoots</span>
-                    <span class="pricing-item-cat">Special Occasions</span>
-                    <span class="pricing-item-cat">Fully Customizable</span>
-                </div>
-            </div>
-           
-        </div>
-    </div>
-</section>
-
-        <!-- PROCESS -->
-        <section class="process-section" aria-label="Our process">
-            <div class="process-container">
-                <div class="process-header">
-                    <div class="process-label">How It Works</div>
-                    <div class="process-heading">
-                        <h2>Book. Capture. Relive.<br></h2>
+        <section class="pricing-section" id="pricing" aria-label="Services and pricing">
+            <div class="pricing-header">
+                <div class="pricing-title">
+                    <h2>
+                        Pick how you want it
+                        &amp;Captured
+                    </h2>
+                    <div class="desc">
+                        We bring bold visions to life through a fusion of strategy, design, and storytelling.
+                        <br>We partner with brands, founders, and creators to shape identities.
                     </div>
                 </div>
-                <div class="process-grid">
-                    <div class="process-item">
-                        <div class="process-title-row">
-                            <h3>Book Your Date</h3>
-                            <span>01</span>
+                <div class="pricing-toggle">
+                    <div class="toggle-wrapper">
+                        <span class="toggle-label active" data-mode="project">Project-based</span>
+                        <span class="toggle-label" data-mode="quickadd">Quick Add</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-list" id="pricingList">
+                <!-- Quick Reel -->
+                <div class="pricing-item project-item" data-order="1">
+                    <div class="pricing-item-header">
+                        <h4 class="pricing-item-title">Quick Reel</h4>
+                        <span class="pricing-item-year">Book Quick Reel</span>
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-desc">
+                            <p>Perfect for small celebrations and personal moments.</p>
                         </div>
-                        <p>Select your date and share your event details.</p>
-                        <div class="process-icon"><img src="images/Handshake.svg" alt="Handshake"></div>
-                    </div>
-                    <div class="process-item">
-                        <div class="process-title-row">
-                            <h3>Booked Confirmed</h3>
-                            <span>02</span>
+                        <div class="pricing-item-cats">
+                            <span class="pricing-item-cat">Up to 2 Hours Coverage</span>
+                            <span class="pricing-item-cat">Professional Videography</span>
+                            <span class="pricing-item-cat">1 Edited Reel (25–40 sec)</span>
+                            <span class="pricing-item-cat">Digital Delivery</span>
                         </div>
-                        <p>We confirm your booking and finalize every detail.</p>
-                        <div class="process-icon"><img src="images/VideoCamera.svg" alt="Video Camera"></div>
                     </div>
-                    <div class="process-item">
-                        <div class="process-title-row">
-                            <h3>Capture Moments</h3>
-                            <span>03</span>
+                    <div class="pricing-item-price">₹1,699</div>
+                </div>
+
+                <!-- Extended Package -->
+                <div class="pricing-item project-item" data-order="3">
+                    <div class="pricing-item-header">
+                        <h4 class="pricing-item-title">Extended Package</h4>
+                        <span class="pricing-item-year">Book Extended Package (Most Recommended)</span>
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-desc">
+                            <p>Ideal for birthdays, family functions, and special occasions.</p>
                         </div>
-                        <p>Captured with cinematic precision.</p>
-                        <div class="process-icon"><img src="images/FilmStrip.svg" alt="Film Strip"></div>
-                    </div>
-                    <div class="process-item">
-                        <div class="process-title-row">
-                            <h3>Receive & Share</h3>
-                            <span>04</span>
+                        <div class="pricing-item-cats">
+                            <span class="pricing-item-cat">Up to 5 Hours Coverage</span>
+                            <span class="pricing-item-cat">Professional Videography</span>
+                            <span class="pricing-item-cat">3 Cinematic Reels</span>
+                            <span class="pricing-item-cat">Highlight Video</span>
+                            <span class="pricing-item-cat">Digital Delivery</span>
                         </div>
-                        <p>Edited reels, delivered and ready to share.</p>
-                        <div class="process-icon"><img src="images/Faders.svg" alt="Faders"></div>
                     </div>
+                    <div class="pricing-item-price">₹4,499</div>
+                </div>
+
+                <!-- Wedding Package -->
+                <div class="pricing-item project-item" data-order="2">
+                    <div class="pricing-item-header">
+                        <h4 class="pricing-item-title">Wedding Package</h4>
+                        <span class="pricing-item-year">Book Wedding Package</span>
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-desc">
+                            <p>Every wedding is a once-in-a-lifetime celebration filled with unforgettable moments.</p>
+                        </div>
+                        <div class="pricing-item-cats">
+                            <span class="pricing-item-cat">Covers the Entire Wedding Celebration</span>
+                            <span class="pricing-item-cat">Shot on iPhone / Samsung Galaxy S25 Ultra</span>
+                            <span class="pricing-item-cat">25 Premium Reels</span>
+                            <span class="pricing-item-cat">Priority Delivery</span>
+                            <span class="pricing-item-cat">Interaction Videos with Complimentary Mobile Portraits</span>
+                            <span class="pricing-item-cat">Cinematic Highlight Film</span>
+                        </div>
+                    </div>
+                    <div class="pricing-item-price">₹69,999</div>
+                </div>
+
+                <!-- Custom Package -->
+                <div class="pricing-item project-item" data-order="5">
+                    <div class="pricing-item-header">
+                        <h4 class="pricing-item-title">Custom Package</h4>
+                        <span class="pricing-item-year">Request Custom Quote</span>
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-desc">
+                            <p>Every event is unique. We'll create a package tailored to your requirements.</p>
+                        </div>
+                        <div class="pricing-item-cats">
+                            <span class="pricing-item-cat">Corporate Events</span>
+                            <span class="pricing-item-cat">Brand Launches</span>
+                            <span class="pricing-item-cat">Pre-Wedding Shoots</span>
+                            <span class="pricing-item-cat">Special Occasions</span>
+                            <span class="pricing-item-cat">Fully Customizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Add-On (Hidden by default, shown in Quick Add mode) -->
+                <div class="pricing-item quickadd-item" data-order="4" style="display:none;">
+                    <div class="pricing-item-header">
+                        <h4 class="pricing-item-title">Quick Add-On</h4>
+                        <span class="pricing-item-year">Add to Booking</span>
+                    </div>
+                    <div class="pricing-item-body">
+                        <div class="pricing-item-desc">
+                            <p>Need a little extra coverage? Extend your shoot to capture those additional moments that matter.</p>
+                        </div>
+                        <div class="pricing-item-cats">
+                            <span class="pricing-item-cat">Extra 30 Minutes of Coverage</span>
+                            <span class="pricing-item-cat">More Candid Moments</span>
+                            <span class="pricing-item-cat">Additional Cinematic Clips</span>
+                            <span class="pricing-item-cat">Perfect for Last-Minute Extensions</span>
+                        </div>
+                    </div>
+                    <div class="pricing-item-price">₹999</div>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-CONTACT - UPDATED WITH NEW FIELDS
+PROCESS - WITH BLACK BACKGROUND
+============================================================ -->
+
+
+        <!-- ============================================================
+CONTACT - UPDATED WITH NEW FIELDS (BLACK BACKGROUND)
 ============================================================ -->
         <section class="contact-section" id="contact" aria-label="Contact us">
             <div class="contact-layout">
@@ -401,7 +359,7 @@ CONTACT - UPDATED WITH NEW FIELDS
                         </div>
                         <div class="contact-info-box">
                             <h4>📞 Phone</h4>
-                            <p><a href="tel:+9183490098">+91 83490098</a></p>
+                            <p><a href="tel:+9183490098">+91 9183490098</a></p>
                             <p style="font-size:13px; color:rgb(255, 255, 255);">Quick confirmation on WhatsApp</p>
                         </div>
                         <div class="contact-info-box">
@@ -500,6 +458,52 @@ CONTACT - UPDATED WITH NEW FIELDS
             </div>
         </section>
 
+        <section class="process-section" aria-label="Our process">
+            <div class="process-container">
+                <div class="process-header">
+                    <div class="process-label">How It Works</div>
+                    <div class="process-heading">
+                        <h2>Book. Capture. Relive.<br></h2>
+                    </div>
+                </div>
+                <div class="process-grid">
+                    <div class="process-item">
+                        <div class="process-title-row">
+                            <h3>Book Your Date</h3>
+                            <span>01</span>
+                        </div>
+                        <p>Select your date and share your event details.</p>
+                        <div class="process-icon"><img src="images/Handshake.svg" alt="Handshake"></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-title-row">
+                            <h3>Booked Confirmed</h3>
+                            <span>02</span>
+                        </div>
+                        <p>We confirm your booking and finalize every detail.</p>
+                        <div class="process-icon"><img src="images/VideoCamera.svg" alt="Video Camera"></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-title-row">
+                            <h3>Capture Moments</h3>
+                            <span>03</span>
+                        </div>
+                        <p>Captured with cinematic precision.</p>
+                        <div class="process-icon"><img src="images/FilmStrip.svg" alt="Film Strip"></div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-title-row">
+                            <h3>Receive & Share</h3>
+                            <span>04</span>
+                        </div>
+                        <p>Edited reels, delivered and ready to share.</p>
+                        <div class="process-icon"><img src="images/Faders.svg" alt="Faders"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- ============================================================
 GUARANTEE - WITH 6 POINTS
 ============================================================ -->
@@ -509,7 +513,7 @@ GUARANTEE - WITH 6 POINTS
             </div>
             <div class="guarantee-grid">
                 <!-- Left Column - Points 1, 2, 3 -->
-                <div class="guarantee-points">
+                <div class="guarantee-points left-points">
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">01</div>
                         <h5>Professional Content</h5>
@@ -539,7 +543,7 @@ GUARANTEE - WITH 6 POINTS
                 </div>
 
                 <!-- Right Column - Points 4, 5, 6 -->
-                <div class="guarantee-points">
+                <div class="guarantee-points right-points">
                     <div class="guarantee-point">
                         <div class="guarantee-point-num">04</div>
                         <h5>Social Media Ready</h5>
@@ -627,7 +631,7 @@ GUARANTEE - WITH 6 POINTS
             </div>
         </section>
 
-        <!-- TESTIMONIALS -->
+        <!-- TESTIMONIALS - INFINITE SCROLL RIGHT TO LEFT -->
         <section class="testimonials-section" aria-label="Client feedback">
             <div class="testimonials-container">
                 <div class="testimonials-top">
@@ -646,41 +650,255 @@ GUARANTEE - WITH 6 POINTS
                     </div>
                 </div>
 
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">★★★★★</div>
-                        <p class="testimonial-text">"As we continued to use their tool and found more use cases, our feature requests quickly found their way into their backlog."</p>
-                        <div class="testimonial-user">
-                            <img src="images/Jayson-1.webp" alt="Jayson Paul">
-                            <div>
-                                <h4>Jayson Paul</h4>
-                                <span>CEO @ PixVerse Studio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">★★★★★</div>
-                        <p class="testimonial-text">"The team felt like an organic extension of our firm, and they're our go-to collaborator for creative projects."</p>
-                        <div class="testimonial-user">
-                            <img src="images/Jayson-1.webp" alt="Lilian Jitters">
-                            <div>
-                                <h4>Lilian Jitters</h4>
-                                <span>CEO @ Haland Group</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">★★★★★</div>
-                        <p class="testimonial-text">"The efficiency with which they manage their projects is simply unmatched. They were prompt, organized, proactive, and savvy."</p>
-                        <div class="testimonial-user">
-                            <img src="images/Jayson-1.webp" alt="Caroline Hubbard">
-                            <div>
-                                <h4>Caroline Hubbard</h4>
-                                <span>CEO @ Norby AI</span>
-                            </div>
-                        </div>
-                    </div>
+
+
+              <!-- Infinite Scroll Track -->
+<div class="scroll-wrapper">
+    <div class="scroll-track" id="scrollTrack">
+        <!-- Card 1 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The team blended in quietly and still captured the room, speeches, and quick candid moments."</p>
+            <div class="review-user">
+                <img src="" alt="Neha Batra">
+                <div>
+                    <h4>Neha Batra</h4>
+                    <span>Corporate dinner</span>
                 </div>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The reel was ready before dinner ended. It felt personal, clean, and easy."</p>
+            <div class="review-user">
+                <img src="" alt="Aarohi Mehta">
+                <div>
+                    <h4>Aarohi Mehta</h4>
+                    <span>Family celebration</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Every new car drop got content the same day. No waiting, no chasing, and the edit matched our energy."</p>
+            <div class="review-user">
+                <img src="" alt="Dheeraj Gupta">
+                <div>
+                    <h4>Dheeraj Gupta</h4>
+                    <span>Car delivery</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Quick reel for my son's birthday party, and the family group had it before everyone left."</p>
+            <div class="review-user">
+                <img src="" alt="Briya Pandey">
+                <div>
+                    <h4>Briya Pandey</h4>
+                    <span>Birthday host</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Professional, quick, and the reel was up before the campaign team even started asking who shot it."</p>
+            <div class="review-user">
+                <img src="" alt="Rahul Jain">
+                <div>
+                    <h4>Rahul Jain</h4>
+                    <span>Campaign shoot</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The creator knew exactly where to stand and what details mattered. Our wedding clips felt polished without feeling staged."</p>
+            <div class="review-user">
+                <img src="" alt="Sana Kapoor">
+                <div>
+                    <h4>Sana Kapoor</h4>
+                    <span>Wedding event</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Same-day reel, zero hassle, and we were already booking the next one before the launch week closed."</p>
+            <div class="review-user">
+                <img src="" alt="Nikhil Rao">
+                <div>
+                    <h4>Nikhil Rao</h4>
+                    <span>Store launch</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"They caught small reactions we missed in the moment. The reels felt warm, not forced."</p>
+            <div class="review-user">
+                <img src="" alt="Megha Trivedi">
+                <div>
+                    <h4>Megha Trivedi</h4>
+                    <span>Haldi ceremony</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Our event needed content quickly. Moment gave us clean edits before the crowd had even left."</p>
+            <div class="review-user">
+                <img src="" alt="Arjun Arora">
+                <div>
+                    <h4>Arjun Arora</h4>
+                    <span>Engagement</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The team felt like an organic extension of our firm, and they're our go-to collaborator for creative projects."</p>
+            <div class="review-user">
+                <img src="" alt="Lilian Jitters">
+                <div>
+                    <h4>Lilian Jitters</h4>
+                    <span>Birthday host</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"They captured the essence of our store launch perfectly. The reels drove more footfall than we expected."</p>
+            <div class="review-user">
+                <img src="" alt="Priya Sharma">
+                <div>
+                    <h4>Priya Sharma</h4>
+                    <span>Store launch</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Our wedding highlights were ready within hours. Friends and family couldn't stop sharing them."</p>
+            <div class="review-user">
+                <img src="" alt="Vikram Singh">
+                <div>
+                    <h4>Vikram Singh</h4>
+                    <span>Wedding event</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 13 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The candid shots and quick edits made our corporate event look like a professionally produced film."</p>
+            <div class="review-user">
+                <img src="" alt="Ananya Reddy">
+                <div>
+                    <h4>Ananya Reddy</h4>
+                    <span>Corporate event</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 14 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"From booking to delivery, everything was seamless. The reels exceeded our expectations."</p>
+            <div class="review-user">
+                <img src="" alt="Karan Malhotra">
+                <div>
+                    <h4>Karan Malhotra</h4>
+                    <span>Birthday celebration</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 15 -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The team captured every emotion of our haldi ceremony beautifully. We'll cherish these reels forever."</p>
+            <div class="review-user">
+                <img src="" alt="Lavanya Patel">
+                <div>
+                    <h4>Lavanya Patel</h4>
+                    <span>Birthday shower</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 16 (Duplicate for seamless loop) -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The team blended in quietly and still captured the room, speeches, and quick candid moments."</p>
+            <div class="review-user">
+                <img src="" alt="Neha Batra">
+                <div>
+                    <h4>Neha Batra</h4>
+                    <span>Corporate dinner</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 17 (Duplicate for seamless loop) -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"The reel was ready before dinner ended. It felt personal, clean, and easy."</p>
+            <div class="review-user">
+                <img src="" alt="Aarohi Mehta">
+                <div>
+                    <h4>Aarohi Mehta</h4>
+                    <span>Family celebration</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 18 (Duplicate for seamless loop) -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Every new car drop got content the same day. No waiting, no chasing, and the edit matched our energy."</p>
+            <div class="review-user">
+                <img src="" alt="Dheeraj Gupta">
+                <div>
+                    <h4>Dheeraj Gupta</h4>
+                    <span>Car delivery</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 19 (Duplicate for seamless loop) -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Quick reel for my son's birthday party, and the family group had it before everyone left."</p>
+            <div class="review-user">
+                <img src="" alt="Briya Pandey">
+                <div>
+                    <h4>Briya Pandey</h4>
+                    <span>Birthday host</span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 20 (Duplicate for seamless loop) -->
+        <div class="review-card">
+            <div class="review-rating">★★★★★</div>
+            <p class="review-text">"Professional, quick, and the reel was up before the campaign team even started asking who shot it."</p>
+            <div class="review-user">
+                <img src="" alt="Rahul Jain">
+                <div>
+                    <h4>Rahul Jain</h4>
+                    <span>Campaign shoot</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
                 <div class="rating-section">
                     <div class="rating-item">
@@ -711,8 +929,12 @@ GUARANTEE - WITH 6 POINTS
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Stay connected</h3>
-                    <p>Join our newsletter for tips, updates, and project highlights—only the good stuff.</p>
+                    <h3>MQLUS</h3>
+
+                    <p>Why choose us
+                        Join creators
+                        Work
+                        Testimonials</p>
                     <form class="footer-newsletter" id="newsletterForm" method="post" action="/">
                         <input type="email" autocomplete="off" name="email" placeholder="Enter email address*" required>
                         <button type="submit" aria-label="Subscribe">
@@ -744,23 +966,28 @@ GUARANTEE - WITH 6 POINTS
                 </div>
 
                 <div class="footer-col">
-                    <p class="footer-label">Useful links</p>
+                    <p class="footer-label">Services</p>
                     <ul class="footer-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/our-services/">Services</a></li>
-                        <li><a href="/portfolios/">Work <span class="badge">10</span></a></li>
-                        <li><a href="/about-us/">About</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#process-section">Process</a></li>
+                        <li><a href="#contact">Book a reel</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="curved">Recent work</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <p class="footer-label">More</p>
+                    <p class="footer-label">Plan & Support</p>
                     <ul class="footer-nav">
-                        <li><a href="/404/">Error 404</a></li>
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="#contact">Apply / Book</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Refund Policy</a></li>
+                        <li><a href="">Legal</a></li>
                     </ul>
                 </div>
+
+
 
                 <div class="footer-col">
                     <p class="footer-label">Get in touch</p>
